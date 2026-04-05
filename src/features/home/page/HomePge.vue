@@ -1,8 +1,7 @@
-<script setup></script>
-<template lang="">
-  <div>
-    <h1>hello Home</h1>
-  </div>
-</template>
+<script setup>
+import TopHeader from "@/components/common/header/TopHeader.vue";
+</script>
 
-<style lang=""></style>
+<template>
+  <TopHeader />
+</template>
