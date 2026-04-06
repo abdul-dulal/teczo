@@ -8,8 +8,8 @@ body {
 
 @theme {
   --color-primary: #1b1f2e;
-  --color-secondary: #6c33d9;
-  --color-base: #0f172a;
+  --color-secondary: #4bf0c5;
+  --color-purple: #6c33d9;
 }
 
 @layer components {
