@@ -2,8 +2,12 @@
 import { useRoute } from "vue-router";
 import logo from "@/assets/img/logo/primary-logo.png";
 import { ArrowUpRight, Search } from "@lucide/vue";
+import SearchPopup from "./SearchPopup.vue";
+import { ref } from "vue";
+import Drawer from "./Drawer.vue";
 
 const route = useRoute();
+const isSearchOpen = ref(false);
 
 const menu = [
   { name: "Home", path: "/" },
@@ -20,12 +24,13 @@ const menu = [
   <div class="flex items-center h-[90px]">
     <div class="bg-white w-[90%]">
       <div class="max-w-[1640px] px-5 mx-auto">
-        <div class="flex items-center 2xl:gap-[135px] gap-10">
+        <div class="flex items-center 2xl:gap-[135px] sm:gap-10 gap-2.5">
           <div>
             <router-link to="/">
               <img :src="logo" alt="Logo" />
             </router-link>
           </div>
+          <Drawer iconColor="black" />
 
           <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
             <router-link
@@ -45,9 +50,9 @@ const menu = [
     </div>
     <div className="flex  items-center ">
       <div
-        class="flex items-center sm:gap-10 gap-5 bg-secondary rounded-tl-[45px] xl:w-[379px] sm:w-[280px] w-[200px] h-[90px] sm:pl-10 pl-7"
+        class="flex items-center sm:gap-10 gap-4 bg-secondary rounded-tl-[45px] xl:w-[379px] sm:w-[280px] w-[190px] h-[90px] sm:pl-10 pl-5"
       >
-        <button class="">
+        <button class="cursor-pointer" @click="isSearchOpen = true">
           <Search />
         </button>
 
@@ -65,5 +70,6 @@ const menu = [
         </div>
       </div>
     </div>
+    <SearchPopup v-model:searchPopup="isSearchOpen" />
   </div>
 </template>
