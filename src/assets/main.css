@@ -4,25 +4,33 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 @theme {
   --color-primary: #1b1f2e;
   --color-secondary: #4bf0c5;
   --color-purple: #6c33d9;
+  --color-bg: #1b1f2e;
+  --color-text: #838694;
 }
 
 @layer components {
   .heading-one {
-    @apply text-3xl font-bold text-primary;
+    @apply text-[50px] leading-[55px] font-bold tracking-[-0.03em]  capitalize text-primary;
   }
 
   .heading-two {
     @apply text-2xl font-semibold text-secondary;
   }
+  .heading-six {
+    @apply text-lg font-medium;
+  }
 
   .paragraph {
-    @apply text-base text-gray-600 leading-relaxed;
+    @apply text-base text-[#838694] leading-[26px];
   }
 
   .card {
@@ -31,6 +39,7 @@ body {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1380px;
+  padding: 0 20px;
   margin: 0 auto;
 }
