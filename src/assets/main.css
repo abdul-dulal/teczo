@@ -25,6 +25,10 @@ body {
   .heading-two {
     @apply text-2xl font-semibold text-secondary;
   }
+  .heading-four {
+    @apply text-[26px] font-semibold text-primary;
+  }
+
   .heading-six {
     @apply text-lg font-medium;
   }
@@ -36,10 +40,13 @@ body {
   .card {
     @apply p-4 rounded-xl shadow-md bg-white;
   }
+  .section-base {
+    @apply py-[120px];
+  }
 }
 
 .container {
-  max-width: 1380px;
+  max-width: 1390px;
   padding: 0 20px;
   margin: 0 auto;
 }

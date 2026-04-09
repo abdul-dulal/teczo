@@ -9,11 +9,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div class="flex items-center gap-0">
     <button
       :class="
         cn(
-          'flex items-center gap-2',
+          'flex items-center',
           'bg-purple text-white',
           'xl:text-base text-sm',
           'leading-7 font-medium',
@@ -30,7 +30,7 @@ const props = defineProps({
     <button
       :class="
         cn(
-          'size-10 rounded-full bg-purple sm:flex hidden items-center justify-center text-white cursor-pointer',
+          'size-[52px] rounded-full bg-purple sm:flex hidden items-center justify-center text-white cursor-pointer',
           props.class,
         )
       "
