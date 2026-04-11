@@ -7,6 +7,9 @@ import Services from "../components/Services.vue";
 import Showcase from "../components/Showcase.vue";
 import Award from "../components/Award.vue";
 import Solution from "../components/Solution.vue";
+import Slider from "../components/Slider.vue";
+import Business from "../components/Business.vue";
+import Faq from "../components/Faq.vue";
 </script>
 
 <template>
@@ -18,4 +21,7 @@ import Solution from "../components/Solution.vue";
   <Showcase />
   <Award />
   <Solution />
+  <Slider />
+  <Business />
+  <Faq />
 </template>
