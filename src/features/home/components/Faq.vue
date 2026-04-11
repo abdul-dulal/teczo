@@ -1,18 +1,31 @@
 <script setup>
+import InputField from "@/components/common/InputField.vue";
 import { faqs } from "@/demoData";
 import { ref } from "vue";
+import { reactive } from "vue";
 
 const activeIndex = ref(2); // default open like image
 
 const toggle = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index;
 };
+
+const form = reactive({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const handleSubmit = () => {
+  console.log("Form Data:", { ...form });
+};
 </script>
 
 <template>
   <div class="section-base">
     <div class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-2 gap-20">
         <div class="">
           <div class="mb-6">
             <h6 class="text-purple heading-six mb-[30px]">
@@ -66,6 +79,48 @@ const toggle = (index) => {
                   {{ item.answer }}
                 </div>
               </transition>
+            </div>
+          </div>
+        </div>
+        <div class="border-t-8 border-primary rounded-[20px]">
+          <div class="bg-secondary rounded-[20px] -mt-1">
+            <div class="w-full rounded-2xl p-[60px]">
+              <h6 class="mb-6 heading-six text-purple">Contact Us</h6>
+              <h2 class="heading-one mb-7">Let’s Contact With Us</h2>
+
+              <!-- Form -->
+              <form @submit.prevent="handleSubmit" class="space-y-[15px]">
+                <input-field
+                  v-model="form.name"
+                  placeholder="Your full name*"
+                  type="name"
+                />
+                <input-field
+                  v-model="form.email"
+                  placeholder="Write your email*"
+                  type="text"
+                />
+                <input-field
+                  v-model="form.phone"
+                  placeholder="Your phone number"
+                  type="text"
+                />
+
+                <textarea
+                  v-model="form.message"
+                  placeholder="Write your message"
+                  rows="4"
+                  class="w-full rounded-[10px] text-sm font-normal border border-primary bg-transparent px-4 py-3 outline-none placeholder:text-primary"
+                ></textarea>
+
+                <!-- Button -->
+                <button
+                  type="submit"
+                  class="w-full text-base rounded-[20px] leading-7 bg-purple py-6 text-white font-medium transition cursor-pointer"
+                >
+                  Send Your Message
+                </button>
+              </form>
             </div>
           </div>
         </div>

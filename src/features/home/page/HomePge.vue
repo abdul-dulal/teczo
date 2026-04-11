@@ -10,6 +10,8 @@ import Solution from "../components/Solution.vue";
 import Slider from "../components/Slider.vue";
 import Business from "../components/Business.vue";
 import Faq from "../components/Faq.vue";
+import Blog from "../components/Blog.vue";
+import Footer from "@/components/common/footer/Footer.vue";
 </script>
 
 <template>
@@ -24,4 +26,6 @@ import Faq from "../components/Faq.vue";
   <Slider />
   <Business />
   <Faq />
+  <Blog />
+  <Footer />
 </template>
