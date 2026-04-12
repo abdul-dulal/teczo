@@ -17,6 +17,10 @@ import slider03 from "@/assets/img/home/slider-03.png";
 import slider04 from "@/assets/img/home/slider-04.png";
 import slider05 from "@/assets/img/home/slider-05.png";
 
+import blog01 from "@/assets/img/home/blog-01.png";
+import blog02 from "@/assets/img/home/blog-02.png";
+import blog03 from "@/assets/img/home/blog-03.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -89,5 +93,23 @@ export const faqs = [
     question: "How Can I Find My Solutions?",
     answer:
       "Integer fringilla sed lacus non venenatis. Vivamus turpis ex suscipit sit amet lorem dictum purus. Sed nec arcu id nunc porttitor nec dui.",
+  },
+];
+
+export const blogs = [
+  {
+    blogTitle: "Our strategic planning ensures your brand's vision aligns",
+    img: blog01,
+    desc: "Development",
+  },
+  {
+    blogTitle: "The complex but awesome CSS border-image proper for",
+    img: blog02,
+    desc: "Technology",
+  },
+  {
+    blogTitle: "Our strategic planning ensures your brand's vision aligns",
+    img: blog01,
+    desc: "Development",
   },
 ];

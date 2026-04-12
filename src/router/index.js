@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
+import HomePge from "@/features/home/page/HomePge.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: () => import("@/features/home/page/HomePge.vue"),
+    name: "/",
+    component: HomePge,
   },
   {
     path: "/home-two",

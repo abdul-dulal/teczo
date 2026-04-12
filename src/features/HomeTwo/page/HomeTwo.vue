@@ -1,6 +1,6 @@
-<script setup></script>
+<script setup>
+import Hero from "../components/Hero.vue";
+</script>
 <template>
-  <div>
-    <h1>hello</h1>
-  </div>
+  <Hero />
 </template>
