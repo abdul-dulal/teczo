@@ -5,8 +5,9 @@ import bright from "@/assets/img/home/bright.png";
 import { Check } from "@lucide/vue";
 import tips from "@/assets/img/home/tips.png";
 import Button from "@/components/base/Button.vue";
+import VideoModal from "./VideoModal.vue";
 
-const showModal = ref(false);
+let showModal = ref(false);
 
 const openModal = () => {
   showModal.value = true;
@@ -111,32 +112,7 @@ const closeModal = () => {
           </div>
         </div>
 
-        <div
-          v-if="showModal"
-          class="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-          @click.self="closeModal"
-        >
-          <div
-            class="bg-black rounded-xl overflow-hidden w-[90%] max-w-3xl relative"
-          >
-            <!-- Close Button -->
-            <button
-              @click="closeModal"
-              class="absolute top-2 right-3 text-white text-2xl"
-            >
-              ✕
-            </button>
-
-            <!-- Video -->
-            <iframe
-              class="w-full h-[400px]"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Video"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+        <VideoModal :showModal="showModal" @closeModal="closeModal" />
       </div>
     </div>
     <div

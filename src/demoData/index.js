@@ -21,6 +21,13 @@ import blog01 from "@/assets/img/home/blog-01.png";
 import blog02 from "@/assets/img/home/blog-02.png";
 import blog03 from "@/assets/img/home/blog-03.png";
 
+import C01 from "@/assets/img/homeTwo/c-01.svg";
+import C02 from "@/assets/img/homeTwo/c-02.svg";
+import C03 from "@/assets/img/homeTwo/c-03.svg";
+import C04 from "@/assets/img/homeTwo/c-04.svg";
+import C05 from "@/assets/img/homeTwo/c-05.svg";
+import C06 from "@/assets/img/homeTwo/c-06.svg";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -109,7 +116,16 @@ export const blogs = [
   },
   {
     blogTitle: "Our strategic planning ensures your brand's vision aligns",
-    img: blog01,
+    img: blog03,
     desc: "Development",
   },
+];
+
+export const ourClients = [
+  { id: "01", title: "IT management", icon: C01 },
+  { id: "02", title: "Product development", icon: C02 },
+  { id: "03", title: "Data visualization", icon: C03 },
+  { id: "04", title: "Ui/Ux Designing", icon: C04 },
+  { id: "05", title: "App development", icon: C05 },
+  { id: "06", title: "Security systems", icon: C06 },
 ];
