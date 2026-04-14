@@ -28,6 +28,10 @@ import C04 from "@/assets/img/homeTwo/c-04.svg";
 import C05 from "@/assets/img/homeTwo/c-05.svg";
 import C06 from "@/assets/img/homeTwo/c-06.svg";
 
+import tm01 from "@/assets/img/homeTwo/team-01.png";
+import tm02 from "@/assets/img/homeTwo/team-02.png";
+import tm03 from "@/assets/img/homeTwo/team-03.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -128,4 +132,10 @@ export const ourClients = [
   { id: "04", title: "Ui/Ux Designing", icon: C04 },
   { id: "05", title: "App development", icon: C05 },
   { id: "06", title: "Security systems", icon: C06 },
+];
+
+export const teamMembers = [
+  { name: "Hanna Marriez", img: tm01, design: "HR Manager" },
+  { name: "David Brumha", img: tm02, design: "Executive Officer" },
+  { name: "Brandon Hussey", img: tm03, design: "Co Founder" },
 ];
