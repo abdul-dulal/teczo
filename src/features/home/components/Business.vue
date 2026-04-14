@@ -22,7 +22,6 @@ onMounted(() => {
 
 <template>
   <div class="relative w-full overflow-hidden">
-    <!-- BACKGROUND LAYER (outside container) -->
     <div class="absolute inset-0 grid grid-cols-2">
       <div class="bg-purple rounded-tr-[140px]"></div>
       <div class="bg-light-gray rounded-tl-[140px]"></div>
