@@ -59,3 +59,13 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+
+.sub-menu {
+  transform: rotateX(-90deg);
+}
+
+hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: rotateX(0deg);
+}

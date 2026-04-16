@@ -10,6 +10,12 @@ import slider02 from "@/assets/img/homeTwo/heroslider02.png";
 import slider03 from "@/assets/img/homeTwo/heroslider03.png";
 import Button from "@/components/base/Button.vue";
 
+import logo from "@/assets/img/logo/primary-logo.png";
+
+import fb from "@/assets/img/homeTwo/fb.svg";
+import linkedin from "@/assets/img/homeTwo/linkedin.svg";
+import twitter from "@/assets/img/homeTwo/twitter.svg";
+
 const slides = [
   {
     title: "Grow Your Business Organic & IT Solution Technology",
@@ -35,6 +41,82 @@ const slides = [
 <template>
   <section class="relative">
     <!-- :autoplay="{ delay: 4000 }" -->
+    <div class="container">
+      <div class="bg-white">
+        <div class="flex">
+          <div class="w-[220px] h-[150px]">
+            <div class="flex h-full items-center justify-center">
+              <router-link to="/">
+                <img :src="logo" alt="Logo" />
+              </router-link>
+            </div>
+          </div>
+          <div>
+            <div class="flex-1 overflow-hidden">
+              <div class="relative h-10 w-full bg-purple rounded-tr-[20px]">
+                <div
+                  class="absolute -left-5 top-0 h-10 w-10 bg-white skew-50 rotate-40"
+                ></div>
+                <div class="h-full flex items-center px-4">
+                  <p class="text-sm font-medium text-white/60">
+                    <span class="text-white">Address:</span> Broklen StreT, USA
+                  </p>
+                  <p class="text-sm font-medium text-white/60">
+                    <span class="text-white">Phone:</span> +999 2456 4895
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      class="group text-white"
+                    >
+                      <component
+                        :is="fb"
+                        class="text-white [&_*]:fill-current group-hover:text-secondary transition duration-300"
+                      />
+                    </a>
+
+                    <a
+                      href="https://twitter.com/"
+                      target="_blank"
+                      class="group text-white"
+                    >
+                      <component
+                        :is="twitter"
+                        class="text-white [&_*]:fill-current group-hover:text-secondary transition duration-300"
+                      />
+                    </a>
+
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      class="group text-white"
+                    >
+                      <component
+                        :is="linkedin"
+                        class="text-white group-hover:text-secondary [&_*]:fill-current transition duration-300"
+                      />
+                    </a>
+
+                    <a
+                      href="https://x.com/"
+                      target="_blank"
+                      class="group text-white"
+                    >
+                      <component
+                        :is="twitter"
+                        class="text-white [&_*]:fill-current group-hover:text-secondary transition duration-300"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div><h1>hello</h1></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <Swiper
       :modules="[Autoplay, Pagination, EffectFade]"
       :slides-per-view="1"

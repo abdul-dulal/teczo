@@ -29,7 +29,7 @@ import { stats } from "@/demoData";
           <div class="grid grid-cols-3 gap-5">
             <div v-for="(item, index) in stats" :key="index">
               <img :src="item.img" alt="item.title" />
-              <h4 class="text-[60px] font-bold leading-[60px]">
+              <h4 class="text-[60px] font-bold leading-[60px] mt-[30px]">
                 {{ item.number }}
               </h4>
               <h6 class="heading-six">{{ item.title }}</h6>
