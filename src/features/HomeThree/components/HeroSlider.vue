@@ -17,15 +17,6 @@ const modules = [Pagination];
 const paginationRef = ref(null);
 const swiperRef = ref(null);
 
-onMounted(() => {
-  if (swiperRef.value && paginationRef.value) {
-    swiperRef.value.swiper.params.pagination.el = paginationRef.value;
-    swiperRef.value.swiper.pagination.init();
-    swiperRef.value.swiper.pagination.render();
-    swiperRef.value.swiper.pagination.update();
-  }
-});
-
 const slides = [
   {
     title: "The best innovative technology solutions",

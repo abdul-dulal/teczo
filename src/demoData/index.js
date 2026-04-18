@@ -32,6 +32,19 @@ import tm01 from "@/assets/img/homeTwo/team-01.png";
 import tm02 from "@/assets/img/homeTwo/team-02.png";
 import tm03 from "@/assets/img/homeTwo/team-03.png";
 
+import cs01 from "@/assets/img/homeThree/cs01.png";
+import cs02 from "@/assets/img/homeThree/cs02.png";
+import cs03 from "@/assets/img/homeThree/cs03.png";
+
+import icon01 from "@/assets/img/homeThree/software.svg";
+import icon02 from "@/assets/img/homeThree/product.svg";
+import icon03 from "@/assets/img/homeThree/tree.svg";
+
+import p01 from "@/assets/img/homeThree/p01.png";
+import p02 from "@/assets/img/homeThree/p02.png";
+import p03 from "@/assets/img/homeThree/p03.png";
+import p04 from "@/assets/img/homeThree/p04.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -157,4 +170,29 @@ export const menu = [
   { name: "Portfolio", path: "/portfolio" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
+];
+
+export const customerService = [
+  {
+    title: "Software Development",
+    image: cs01,
+    icon: icon01,
+  },
+  {
+    title: "Product Development",
+    image: cs02,
+    icon: icon02,
+  },
+  {
+    title: "Cloud Integration",
+    image: cs03,
+    icon: icon03,
+  },
+];
+
+export const counterData = [
+  { count: "586+", img: p01, title: "Project completed" },
+  { count: "284+", img: p02, title: "Specialist  company" },
+  { count: "4500", img: p03, title: "Satisfied customers" },
+  { count: "320", img: p04, title: "Smart solutions" },
 ];
