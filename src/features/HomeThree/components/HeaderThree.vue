@@ -2,10 +2,11 @@
 import { useRoute } from "vue-router";
 import logo from "@/assets/img/logo/primary-logo.png";
 import { ArrowUpRight, Search } from "@lucide/vue";
-import SearchPopup from "./SearchPopup.vue";
-import Drawer from "./Drawer.vue";
+
 import { ref } from "vue";
 import { menu } from "@/demoData";
+import SearchPopup from "@/components/common/header/SearchPopup.vue";
+import Drawer from "@/components/common/header/Drawer.vue";
 
 const route = useRoute();
 const isSearchOpen = ref(false);
@@ -65,12 +66,10 @@ const isSearchOpen = ref(false);
       </div>
 
       <!-- RIGHT SECTION -->
-      <div
-        class="xl:w-[379px] sm:w-[280px] w-[190px] h-[90px] bg-secondary rounded-tl-[45px] z-999"
-      >
+      <div class="xl:w-[379px] sm:w-[280px] w-[190px] h-[90px] z-999">
         <div class="flex items-center w-full">
           <div
-            class="flex items-center sm:gap-10 gap-4 bg-secondary rounded-tl-[45px] xl:w-[290px] sm:w-[280px] w-[190px] h-[90px] sm:pl-10 pl-5"
+            class="flex items-center sm:gap-10 gap-4 rounded-tl-[45px] xl:w-[290px] sm:w-[280px] w-[190px] h-[90px] sm:pl-10 pl-5"
           >
             <!-- SEARCH -->
             <button class="cursor-pointer" @click="isSearchOpen = true">
@@ -98,10 +97,5 @@ const isSearchOpen = ref(false);
         <SearchPopup v-model:searchPopup="isSearchOpen" />
       </div>
     </div>
-
-    <!-- RIGHT BACKGROUND SHAPE -->
-    <div
-      class="w-[15%] h-full absolute right-0 top-0 rounded-tl-[45px] bg-secondary"
-    ></div>
   </div>
 </template>

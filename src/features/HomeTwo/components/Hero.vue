@@ -218,11 +218,11 @@ const route = useRoute();
               </div>
             </div>
             <!-- SEARCH POPUP -->
-            <SearchPopup v-model:searchPopup="isSearchOpen" />
           </div>
         </div>
       </div>
     </div>
+    <SearchPopup v-model:searchPopup="isSearchOpen" />
     <div>
       <img
         :src="shape01"
