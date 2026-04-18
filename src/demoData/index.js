@@ -139,3 +139,22 @@ export const teamMembers = [
   { name: "David Brumha", img: tm02, design: "Executive Officer" },
   { name: "Brandon Hussey", img: tm03, design: "Co Founder" },
 ];
+
+export const menu = [
+  {
+    name: "Home",
+    path: "/",
+    children: [
+      { name: "Home One", path: "/" },
+      { name: "Home Two", path: "/home-two" },
+      { name: "Home Three", path: "/home-three" },
+      { name: "Home Three", path: "/home-3" },
+    ],
+  },
+  { name: "About", path: "/about" },
+  { name: "Pages", path: "/pages" },
+  { name: "Services", path: "/services" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "/contact" },
+];

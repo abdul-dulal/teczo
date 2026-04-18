@@ -12,7 +12,7 @@ const options = [
   <div class="bg-secondary h-10 overflow-hidden">
     <div class="w-[20%] h-10 absolute left-0 top-0 bg-primary"></div>
     <div class="max-w-[1700px] mx-auto px-5 h-full flex">
-      <div class="bg-primary h-full w-full rounded-br-[45px] z-9999">
+      <div class="bg-primary h-full w-full rounded-br-[45px] z-999">
         <div class="flex items-center w-full h-full justify-between">
           <div class="flex items-center gap-2.5">
             <div><Clock size="16" color="white" /></div>
