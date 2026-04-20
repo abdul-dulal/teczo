@@ -45,6 +45,11 @@ import p02 from "@/assets/img/homeThree/p02.png";
 import p03 from "@/assets/img/homeThree/p03.png";
 import p04 from "@/assets/img/homeThree/p04.png";
 
+import project01 from "@/assets/img/homeThree/p-01.png";
+import project02 from "@/assets/img/homeThree/p-02.png";
+
+import client01 from "@/assets/img/homeThree/client01.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -195,4 +200,35 @@ export const counterData = [
   { count: "284+", img: p02, title: "Specialist  company" },
   { count: "4500", img: p03, title: "Satisfied customers" },
   { count: "320", img: p04, title: "Smart solutions" },
+];
+
+export const projectSlides = [
+  { image: project01, title: "Tech solution", design: "Design / Idea" },
+  {
+    image: project02,
+    title: "Cyber security",
+    design: "Design / Development",
+  },
+  {
+    image: project01,
+    title: " Cyber security",
+    design: "Design / Development",
+  },
+];
+
+export const clientTestimonials = [
+  {
+    name: "St. Jessica Lauren",
+    role: "Developer",
+    image: client01,
+    text: `The team demonstrated a deep understanding of our industry which
+    helped them to tailor solutions specifically to our needs. They took the
+    time to understand our business and worked`,
+  },
+  {
+    name: "John Carter",
+    role: "Designer",
+    image: client01,
+    text: "Amazing service and smooth communication. Highly recommended.",
+  },
 ];

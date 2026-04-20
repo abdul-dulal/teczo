@@ -26,16 +26,15 @@ body {
     @apply text-[50px] leading-[55px] font-bold tracking-[-0.03em]  capitalize text-primary;
   }
 
-  .heading-two {
-    @apply text-2xl font-semibold text-secondary;
-  }
-
   .heading-three {
     @apply text-4xl font-bold leading-11;
   }
 
   .heading-four {
     @apply text-[26px] font-semibold text-primary;
+  }
+  .heading-five {
+    @apply text-2xl font-semibold text-secondary;
   }
 
   .heading-six {

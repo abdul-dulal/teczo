@@ -5,7 +5,7 @@ import { counterData } from "@/demoData";
 <template>
   <div class="bg-purple py-[110px]">
     <div class="container">
-      <div class="grid grid-cols-4 gap-[90px]">
+      <div class="grid grid-cols-4 gap-[101px]">
         <div v-for="(counter, index) in counterData" :key="index">
           <div class="flex gap-[30px]">
             <div class="mt-5">
