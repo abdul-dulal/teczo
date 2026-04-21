@@ -50,6 +50,13 @@ import project02 from "@/assets/img/homeThree/p-02.png";
 
 import client01 from "@/assets/img/homeThree/client01.png";
 
+import t01 from "@/assets/img/homeThree/browser.svg";
+import t02 from "@/assets/img/homeThree/watch.svg";
+import t03 from "@/assets/img/homeThree/tv.svg";
+import t04 from "@/assets/img/homeThree/android.svg";
+import t05 from "@/assets/img/homeThree/apple.svg";
+import t06 from "@/assets/img/homeThree/ito.svg";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -231,4 +238,13 @@ export const clientTestimonials = [
     image: client01,
     text: "Amazing service and smooth communication. Highly recommended.",
   },
+];
+
+export const webServices = [
+  { name: "Website", icon: t01 },
+  { name: "Wearable", icon: t02 },
+  { name: "Television", icon: t03 },
+  { name: "Android", icon: t04 },
+  { name: "Apple", icon: t05 },
+  { name: "ITO", icon: t06 },
 ];

@@ -9,6 +9,8 @@ import Choose from "../components/Choose.vue";
 import Projects from "../components/Projects.vue";
 import PricePlan from "@/features/HomeTwo/components/PricePlan.vue";
 import Testimonial from "@/features/HomeTwo/components/Testimonial.vue";
+import Services from "../components/Services.vue";
+import Faq from "../components/Faq.vue";
 </script>
 <template>
   <TopHeader />
@@ -21,4 +23,6 @@ import Testimonial from "@/features/HomeTwo/components/Testimonial.vue";
   <Projects />
   <PricePlan />
   <Testimonial />
+  <Services />
+  <Faq />
 </template>
