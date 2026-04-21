@@ -42,7 +42,7 @@ const toggle = (index) => {
         class="absolute right-[60px] p-[30px] bottom-[60px] bg-[linear-gradient(239.18deg,rgba(255,255,255,0.08)_17.93%,rgba(255,255,255,0.02)_81.51%)] size-[260px] rounded-[15px] backdrop-blur-2xl"
       >
         <div class="flex flex-col justify-between h-full">
-          <button class="text-secondary flex justify-end">
+          <button class="text-secondary flex justify-end cursor-pointer">
             <MoveUpRight size="35" />
           </button>
           <h6
