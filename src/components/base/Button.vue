@@ -18,7 +18,7 @@ const props = defineProps({
           'xl:text-base text-sm',
           'leading-7 font-medium',
           'xl:px-[30px] px-5',
-          'xl:py-3 py-2.5',
+          'xl:py-4 py-2.5',
           'rounded-full cursor-pointer',
           props.class,
         )
@@ -30,7 +30,7 @@ const props = defineProps({
     <button
       :class="
         cn(
-          'size-[52px] rounded-full bg-purple sm:flex hidden items-center justify-center text-white cursor-pointer',
+          'size-[60px] rounded-full bg-purple sm:flex hidden items-center justify-center text-white cursor-pointer',
           props.class,
         )
       "

@@ -57,6 +57,10 @@ import t04 from "@/assets/img/homeThree/android.svg";
 import t05 from "@/assets/img/homeThree/apple.svg";
 import t06 from "@/assets/img/homeThree/ito.svg";
 
+import s01 from "@/assets/img/homeFour/s01.svg";
+import s02 from "@/assets/img/homeFour/s02.svg";
+import s03 from "@/assets/img/homeFour/s03.svg";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -173,7 +177,7 @@ export const menu = [
       { name: "Home One", path: "/" },
       { name: "Home Two", path: "/home-two" },
       { name: "Home Three", path: "/home-three" },
-      { name: "Home Three", path: "/home-3" },
+      { name: "Home Four", path: "/home-four" },
     ],
   },
   { name: "About", path: "/about" },
@@ -247,4 +251,25 @@ export const webServices = [
   { name: "Android", icon: t04 },
   { name: "Apple", icon: t05 },
   { name: "ITO", icon: t06 },
+];
+
+export const servicesFour = [
+  {
+    title: "Cyber Security Solutions",
+    description: "Integer fringilla sed lacus non venenatis. Vivamus turpis ex",
+    icon: s01,
+    highlight: false,
+  },
+  {
+    title: "Perfect Business Solution",
+    description: "Integer fringilla sed lacus non venenatis. Vivamus turpis ex",
+    icon: s02,
+    highlight: true,
+  },
+  {
+    title: "Expert Technology Consultants",
+    description: "Integer fringilla sed lacus non venenatis. Vivamus turpis ex",
+    icon: s03,
+    highlight: false,
+  },
 ];
