@@ -61,6 +61,11 @@ import s01 from "@/assets/img/homeFour/s01.svg";
 import s02 from "@/assets/img/homeFour/s02.svg";
 import s03 from "@/assets/img/homeFour/s03.svg";
 
+import itService01 from "@/assets/img/homeFour/service-01.png";
+import itService02 from "@/assets/img/homeFour/service-02.png";
+import itService03 from "@/assets/img/homeFour/service-03.png";
+import itService04 from "@/assets/img/homeFour/service-04.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -271,5 +276,44 @@ export const servicesFour = [
     description: "Integer fringilla sed lacus non venenatis. Vivamus turpis ex",
     icon: s03,
     highlight: false,
+  },
+];
+
+export const itService = [
+  {
+    id: 1,
+    title: "Product Development",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService01,
+    number: "01",
+    active: false,
+  },
+  {
+    id: 2,
+    title: "Data Analysis",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService02,
+    number: "02",
+    active: true,
+  },
+  {
+    id: 3,
+    title: "Digital Marketing",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService03,
+    number: "03",
+    active: false,
+  },
+  {
+    id: 4,
+    title: "Security System",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService04,
+    number: "04",
+    active: false,
   },
 ];
