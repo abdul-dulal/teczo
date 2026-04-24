@@ -1,13 +1,15 @@
-<script>
+<script setup>
 import banner from "@/assets/img/homeFour/agency bg.png";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import { itService } from "@/demoData";
+import { ArrowUpRight } from "lucide-vue-next";
+import { Autoplay } from "swiper/modules";
 </script>
 
 <template>
   <section
-    class="bg-bg section-base"
+    class="bg-bg section-base overflow-hidden"
     :style="{ backgroundImage: `url(${banner})` }"
   >
     <div class="container">
@@ -21,6 +23,8 @@ import { itService } from "@/demoData";
       </div>
       <div class="relative ml-0 w-[calc(100vw-10px)] mr-10 overflow-visible">
         <Swiper
+          :modules="[Autoplay]"
+          :autoplay="{ delay: 3000 }"
           :slides-per-view="4"
           :space-between="30"
           :loop="true"
@@ -31,49 +35,46 @@ import { itService } from "@/demoData";
           }"
           class="w-full"
         >
-          <SwiperSlide
-            v-for="card in itService"
-            :key="card.id"
-            class="relative min-w-[260px] rounded-xl p-6 transition-all duration-300"
-            :class="
-              card.active
-                ? 'bg-gradient-to-br from-purple-600 to-indigo-600 text-white'
-                : 'bg-white text-gray-800'
-            "
-          >
-            <div>
-              <!-- Title -->
-              <h3 class="font-semibold text-lg mb-2">
-                {{ card.title }}
-              </h3>
+          <SwiperSlide v-for="card in itService" :key="card.id">
+            <div
+              class="relative rounded-xl px-10 py-[50px] bg-white group hover:bg-purple transition-all ease-in-out duration-500"
+            >
+              <div>
+                <!-- Title -->
+                <h5
+                  class="heading-five font-bold text-primary mb-5 transition-all ease-in-out duration-500 group-hover:text-white"
+                >
+                  {{ card.title }}
+                </h5>
 
-              <!-- Description -->
-              <p class="text-sm opacity-70 mb-6">
-                {{ card.description }}
-              </p>
+                <p
+                  class="paragraph text-text mb-8 transition-all ease-in-out duration-500 group-hover:text-white/75"
+                >
+                  {{ card.description }}
+                </p>
 
-              <!-- Bottom Image + Arrow -->
-              <div class="flex items-center justify-between">
-                <div class="relative">
-                  <img
-                    :src="card.image"
-                    class="w-16 h-16 rounded-full object-cover"
-                  />
-                  <!-- Arrow -->
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between">
+                    <div class="relative">
+                      <img
+                        :src="card.image"
+                        class="rounded-full object-cover"
+                      />
+
+                      <button
+                        class="absolute -top-2 -right-2 size-[60px] bg-secondary rounded-full flex items-center justify-center group-hover:rotate-45 transition-all ease-in-out duration-500 cursor-pointer"
+                      >
+                        <ArrowUpRight />
+                      </button>
+                    </div>
+                  </div>
                   <div
-                    class="absolute -top-2 -right-2 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center"
+                    class="text-[100px] text-[#F7F7F9] group-hover:text-[#F7F7F926] transition-all ease-in-out duration-300 font-semibold font-inter"
                   >
-                    →
+                    {{ card.number }}
                   </div>
                 </div>
               </div>
-
-              <!-- Big Background Number -->
-              <span
-                class="absolute right-4 bottom-4 text-5xl font-bold opacity-10"
-              >
-                {{ card.number }}
-              </span>
             </div>
           </SwiperSlide>
         </Swiper>

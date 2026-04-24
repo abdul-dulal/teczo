@@ -4,6 +4,9 @@ import TopHeader from "@/components/common/header/TopHeader.vue";
 import Hero from "../components/Hero.vue";
 import About from "../components/About.vue";
 import Agency from "../components/Agency.vue";
+import ChooseUs from "../components/ChooseUs.vue";
+import Feature from "../components/Feature.vue";
+import Project from "../components/Project.vue";
 </script>
 <template>
   <TopHeader />
@@ -11,4 +14,7 @@ import Agency from "../components/Agency.vue";
   <Hero />
   <About />
   <Agency />
+  <ChooseUs />
+  <Feature />
+  <Project />
 </template>

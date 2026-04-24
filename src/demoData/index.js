@@ -316,4 +316,40 @@ export const itService = [
     number: "04",
     active: false,
   },
+  {
+    id: 1,
+    title: "Product Development",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService01,
+    number: "01",
+    active: false,
+  },
+  {
+    id: 2,
+    title: "Data Analysis",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService02,
+    number: "02",
+    active: true,
+  },
+  {
+    id: 3,
+    title: "Digital Marketing",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService03,
+    number: "03",
+    active: false,
+  },
+  {
+    id: 4,
+    title: "Security System",
+    description:
+      "Growth marketing is a marketing strategy uses data and experimentation to help a business grow by acquiring",
+    image: itService04,
+    number: "04",
+    active: false,
+  },
 ];
