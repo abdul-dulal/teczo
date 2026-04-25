@@ -13,7 +13,7 @@ import wave from "@/assets/img/home/wave.png";
       <div class="absolute left-0 -top-10">
         <img :src="shape" class="" alt="Shape" />
       </div>
-      <div class="max-w-[1700px] mx-auto relative px-5 pt-[100px] pb-[109px]">
+      <div class="max-w-[1700px] mx-auto relative pt-[100px] pb-[109px]">
         <div class="absolute left-4 bottom-10">
           <img :src="star" alt="Star" />
         </div>
@@ -24,12 +24,16 @@ import wave from "@/assets/img/home/wave.png";
           <img :src="wave" alt="" />
         </div>
         <div class="container">
-          <div class="grid grid-cols-[45%_43%] gap-[150px] items-center">
+          <div
+            class="grid md:grid-cols-[45%_43%] grid-cols-1 xl:gap-[150px] md:gap-20 gap-10 items-center"
+          >
             <div class="z-99">
               <h6 class="heading-six text-secondary">
                 Solution for your business
               </h6>
-              <h2 class="text-[94px] text-white font-bold leading-[95px]">
+              <h2
+                class="2xl:text-[94px] lg:text-[70px] sm:text-[55px] text-[45px] text-white font-bold 2xl:leading-[95px] lg:leading-[70px] sm:leading-[55px] leading-11"
+              >
                 Technology Solutions for Future
               </h2>
               <Button

@@ -48,12 +48,12 @@ const slides = [
 ];
 </script>
 <template>
-  <section class="pt-[120px]">
+  <section class="2xl:pt-[120px] md:pt-20 pt-[60px]">
     <div class="max-w-[583px] block m-auto">
-      <h6 class="heading-six text-purple mb-5 text-center">
+      <h6 class="heading-six text-purple text-center">
         Check Our Latest Projects
       </h6>
-      <h2 class="heading-one text-center mb-8">
+      <h2 class="heading-one text-center">
         Improve and enhance our tech projects
       </h2>
     </div>

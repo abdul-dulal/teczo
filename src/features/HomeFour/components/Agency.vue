@@ -21,23 +21,26 @@ import { Autoplay } from "swiper/modules";
           We Provide Our Clients Best IT Services
         </h2>
       </div>
-      <div class="relative ml-0 w-[calc(100vw-10px)] mr-10 overflow-visible">
+      <div
+        class="relative ml-0 xl:w-[calc(100vw-10px)] xl:mr-10 mr-0 overflow-visible"
+      >
         <Swiper
           :modules="[Autoplay]"
           :autoplay="{ delay: 3000 }"
-          :slides-per-view="4"
-          :space-between="30"
+          :slides-per-view="1"
+          :space-between="25"
           :loop="true"
           :breakpoints="{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
+            1024: { slidesPerView: 3 },
+            1224: { slidesPerView: 4 },
           }"
           class="w-full"
         >
           <SwiperSlide v-for="card in itService" :key="card.id">
             <div
-              class="relative rounded-xl px-10 py-[50px] bg-white group hover:bg-purple transition-all ease-in-out duration-500"
+              class="relative rounded-xl 2xl:px-10 px-7 2x:py-[50px] py-10 bg-white group hover:bg-purple transition-all ease-in-out duration-500"
             >
               <div>
                 <!-- Title -->
@@ -62,7 +65,7 @@ import { Autoplay } from "swiper/modules";
                       />
 
                       <button
-                        class="absolute -top-2 -right-2 size-[60px] bg-secondary rounded-full flex items-center justify-center group-hover:rotate-45 transition-all ease-in-out duration-500 cursor-pointer"
+                        class="absolute -top-2 -right-2 2xl:size-[60px] size-12 bg-secondary rounded-full flex items-center justify-center group-hover:rotate-45 transition-all ease-in-out duration-500 cursor-pointer"
                       >
                         <ArrowUpRight />
                       </button>

@@ -23,7 +23,7 @@ body {
 
 @layer components {
   .heading-one {
-    @apply text-[50px] leading-[55px] font-bold tracking-[-0.03em]  capitalize text-primary;
+    @apply xl:text-[50px] md:text-[42px] text-[32px] xl:leading-[55px] md:leading-11 leading-9 font-bold tracking-[-0.03em]  capitalize text-primary sm:mb-8 mb-6;
   }
 
   .heading-three {
@@ -31,14 +31,14 @@ body {
   }
 
   .heading-four {
-    @apply text-[26px] font-semibold text-primary;
+    @apply sm:text-[26px] text-[22px] font-semibold text-primary;
   }
   .heading-five {
-    @apply text-2xl font-semibold text-secondary;
+    @apply sm:text-2xl text-xl font-semibold text-secondary;
   }
 
   .heading-six {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium sm:mb-5 mb-4;
   }
 
   .paragraph {
@@ -49,7 +49,7 @@ body {
     @apply p-4 rounded-xl shadow-md bg-white;
   }
   .section-base {
-    @apply py-[120px];
+    @apply 2xl:py-[120px] md:py-20 py-[60px];
   }
 }
 

@@ -15,7 +15,7 @@ const closeModal = () => {
 
 <template>
   <section
-    class="w-full bg-no-repeat bg-cover bg-center h-[600px]"
+    class="w-full bg-no-repeat bg-cover bg-center 2xl:h-[600px] h-[400px] overflow-hidden xl:mt-0 mt-14"
     :style="{ backgroundImage: `url(${banner})` }"
   >
     <div class="relative flex items-center justify-center h-full">
@@ -24,7 +24,7 @@ const closeModal = () => {
       >
         <!-- Circle -->
         <div
-          class="relative w-[200px] h-[200px] rounded-full backdrop-blur-md bg-white/10 border border-white/20 flex items-center justify-center"
+          class="relative sm:w-[200px] w-[180px] sm:h-[200px] h-[180px] rounded-full backdrop-blur-md bg-white/10 border border-white/20 flex items-center justify-center"
         >
           <!-- Rotating Text -->
           <div

@@ -5,7 +5,7 @@ import { services } from "@/demoData";
 
 <template>
   <div class="py-[120px] bg-[#F7F7F9]">
-    <div class="max-w-[1790px] px-5 mx-auto">
+    <div class="max-w-[1790px] mx-auto">
       <div class="max-w-[651px] mx-auto">
         <h6 class="heading-six text-center">Our service</h6>
         <h2 class="heading-one text-center my-[30px]">
@@ -28,7 +28,7 @@ import { services } from "@/demoData";
             <div class="block m-auto w-full">
               <Button
                 btnTitle="Read More"
-                class="border border-[#1B1F2E] bg-transparent text-primary hover:bg-purple hover:text-white hover:border-transparent"
+                class="border border-[#1B1F2E] bg-transparent text-primary hover:bg-purple hover:text-white hover:border-transparent px-4 py-2"
               />
             </div>
           </div>

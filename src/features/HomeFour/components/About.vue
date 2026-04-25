@@ -19,17 +19,19 @@ onMounted(() => {
 </script>
 <template>
   <section class="section-base relative">
-    <div class="absolute right-0 bottom-[100px]">
+    <div class="absolute right-0 bottom-[100px] 2xl:block hidden">
       <img :src="circle" alt="Circle" />
     </div>
     <div class="container">
-      <div class="grid grid-cols-2 gap-20">
+      <div class="grid md:grid-cols-2 2xl:gap-20 gap-10">
         <div class="relative">
           <img :src="robort" alt="Robort" />
           <div class="absolute right-0 bottom-10">
             <img :src="man" alt="Man" />
           </div>
-          <div class="absolute right-[10%] top-5">
+          <div
+            class="absolute 2xl:right-[10%] xl:right-[8%] xl:block hidden top-5"
+          >
             <div class="relative">
               <img :src="arrowbig" alt="Arrow" />
               <img class="absolute top-10 -left-2" :src="arrow" alt="Arrow" />
@@ -37,7 +39,7 @@ onMounted(() => {
           </div>
 
           <div
-            class="absolute -left-6 bottom-4 w-[114px] h-[151px] bg-purple rounded-[10px] transform rotate-[-199deg] z-0"
+            class="absolute -left-6 bottom-4 w-[114px] xl:block hidden h-[151px] bg-purple rounded-[10px] transform rotate-[-199deg] z-0"
           ></div>
 
           <div
@@ -48,20 +50,20 @@ onMounted(() => {
           </div>
         </div>
         <div>
-          <h6 class="heading-six mb-5">Welcome to Our Teczo</h6>
-          <h2 class="heading-one max-w-[514px] mb-8">
+          <h6 class="heading-six">Welcome to Our Teczo</h6>
+          <h2 class="heading-one max-w-[514px]">
             Best IT Technology Services You Can Trust
           </h2>
-          <h5 class="heading-six font-bold text-purple mb-6">
+          <h5 class="heading-six font-bold text-purple sm:mb-6 mb-4">
             The professional approach to technology.
           </h5>
-          <p class="paragraph text-text max-w-[509px] mb-6">
+          <p class="paragraph text-text max-w-[509px] sm:mb-6 mb-4">
             Integer fringilla sed lacus non venenatis. Vivamus turpis ex,
             suscipit sit amet lorem ut, viverra dictum purus. Sed nec arcu id
             nunc ut enim dignissim, condimentum rhoncus arcu gravida.
           </p>
 
-          <div class="my-8 flex justify-between items-center">
+          <div class="sm:my-8 my-6 flex justify-between items-center">
             <div class="flex gap-[15px]">
               <div>
                 <component :is="icon" class="mt-1" />
@@ -102,7 +104,7 @@ onMounted(() => {
           </div>
           <Button
             btnTitle="Discover More"
-            class="bg-transparent border border-primary text-primary py-[25px] mt-3"
+            class="bg-transparent border border-primary text-primary 2xl:py-[25px] py-[14px] mt-3"
           />
         </div>
       </div>

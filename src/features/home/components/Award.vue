@@ -4,16 +4,16 @@ import { experts } from "@/demoData";
 </script>
 
 <template>
-  <div class="py-[120px]">
+  <div class="section-base">
     <div class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid md:grid-cols-2">
         <div class="max-w-[361px]">
-          <h6 class="heading-six text-purple mb-[30px]">Team and awards</h6>
+          <h6 class="heading-six text-purple">Team and awards</h6>
           <h2 class="heading-one">Our awards and tech experts</h2>
         </div>
         <div>
-          <div class="grid grid-cols-2">
-            <div class="flex gap-[25px] mb-8">
+          <div class="grid grid-cols-2 space-y-5">
+            <div class="flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -24,7 +24,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex gap-[25px]">
+            <div class="flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -35,7 +35,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex gap-[25px]">
+            <div class="flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -46,7 +46,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex gap-[25px]">
+            <div class="flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -60,7 +60,9 @@ import { experts } from "@/demoData";
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-[30px] mt-[60px]">
+      <div
+        class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] lg:mt-[60px] mt-10"
+      >
         <div v-for="(item, index) in experts" :key="index">
           <div>
             <div class="relative rounded-2xl overflow-hidden group">

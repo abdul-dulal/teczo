@@ -22,17 +22,19 @@ const closeModal = () => {
   <div>
     <div class="bg-bg section-base w-full overflow-hidden">
       <div class="container">
-        <div class="relative ml-0 w-[calc(100vw-10px)] mr-10 overflow-visible">
-          <div class="px-6 flex gap-[8%]">
+        <div
+          class="relative ml-0 md:w-[calc(100vw-10px)] md:mr-10 overflow-visible"
+        >
+          <div class="flex md:flex-row flex-col gap-[8%]">
             <div class="max-w-[530px] text-white">
-              <h6 class="heading-six text-secondary mb-5">Tech Management</h6>
+              <h6 class="heading-six text-secondary">Tech Management</h6>
 
               <h2 class="heading-one text-white">
                 The Best Source For <br />
                 IT Solutions
               </h2>
 
-              <p class="paragraph mt-5">
+              <p class="paragraph">
                 Integer fringilla sed lacus non venenatis. Vivamus turpis ex,
                 suscipit sit amet lorem ut, viverra dictum purus. Sed nec arcu
                 id nunc ut enim dignissim, condimentum rhoncus arcu gravida.
@@ -80,16 +82,18 @@ const closeModal = () => {
               </div>
             </div>
 
-            <div class="relative flex items-stretch h-[520px]">
+            <div
+              class="relative flex items-stretch md:h-[520px] h-[400px] md:mt-0 mt-8"
+            >
               <!-- Left Section -->
               <div
                 class="bg-purple w-[220px] h-full flex flex-col items-center justify-around rounded-bl-[20px] relative"
               >
                 <!-- Play Button -->
-                <div class="p-2 border border-white rounded-full">
+                <div class="sm:p-2 p-1.5 border border-white rounded-full">
                   <button
                     @click="openModal"
-                    class="w-20 h-20 rounded-full bg-secondary flex items-center justify-center hover:scale-110 transition cursor-pointer text-[28px]"
+                    class="sm:w-20 w-16 sm:h-20 h-16 rounded-full bg-secondary flex items-center justify-center hover:scale-110 transition cursor-pointer sm:text-[28px] text-2xl"
                   >
                     ▶
                   </button>
@@ -120,7 +124,7 @@ const closeModal = () => {
       :style="{ backgroundImage: `url(${tips})` }"
     >
       <h2
-        class="max-w-[860px] block m-auto text-center text-[70px] leading-[75px] font-bold text-white"
+        class="max-w-[860px] block m-auto text-center lg:text-[70px] md:text-[55px] text-[45px] lg:leading-[75px] md:leading-[55px] leading-11 sm:px-0 px-1.5 font-bold text-white"
       >
         Best technology solution in your fingertips
       </h2>

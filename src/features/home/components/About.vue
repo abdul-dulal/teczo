@@ -7,16 +7,20 @@ import { stats } from "@/demoData";
 <template>
   <div class="section-base">
     <div class="container">
-      <div class="grid grid-cols-[35.5%_60%] gap-[60px]">
+      <div
+        class="grid md:grid-cols-[35.5%_60%] 2xl:gap-[60px] lg:gap-12 gap-[30px]"
+      >
         <div>
-          <h6 class="heading-six text-purple mb-20">Know about ourself</h6>
+          <h6 class="heading-six text-purple lg:mb-20 mb-10">
+            Know about ourself
+          </h6>
           <div>
             <img :src="technology" class="w-full h-auto" alt="Technology" />
           </div>
         </div>
         <div>
-          <div class="max-w-[665px] mb-[60px]">
-            <h2 class="heading-one mb-10">
+          <div class="max-w-[665px] 2xl:mb-[60px] lg:mb-10 mb-6">
+            <h2 class="heading-one">
               We Can Take Your Business to the Next Level.
             </h2>
             <p class="paragraph">
@@ -26,7 +30,7 @@ import { stats } from "@/demoData";
               dignissim, condimentum rhoncus arcu gravida.
             </p>
           </div>
-          <div class="grid grid-cols-3 gap-5">
+          <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
             <div v-for="(item, index) in stats" :key="index">
               <img :src="item.img" alt="item.title" />
               <h4 class="text-[60px] font-bold leading-[60px] mt-[30px]">

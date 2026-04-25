@@ -23,14 +23,14 @@ const timeline = [
 ];
 </script>
 <template>
-  <section class="section-base">
+  <section class="section-base overflow-hidden">
     <div class="container">
-      <div class="grid grid-cols-2 gap-20">
+      <div class="grid md:grid-cols-2 2xl:gap-20 lg:gap-10 gap-8">
         <div>
-          <h6 class="heading-six text-purple font-bold mb-5">
+          <h6 class="heading-six text-purple font-bold">
             Why People Choose Us
           </h6>
-          <h2 class="heading-one max-w-[481px] mb-8">
+          <h2 class="heading-one max-w-[481px]">
             Why We are Different from Others
           </h2>
 
@@ -38,7 +38,7 @@ const timeline = [
             <div
               v-for="(item, index) in timeline"
               :key="index"
-              class="flex items-start gap-8 mb-7 relative"
+              class="flex items-start gap-8 sm:mb-7 mb-5 relative"
             >
               <!-- line (hide for last item) -->
               <div
@@ -47,20 +47,22 @@ const timeline = [
               ></div>
 
               <!-- circle -->
-              <div
-                class="w-12 h-12 flex items-center justify-center rounded-full text-lg font-semibold z-10"
-                :class="
-                  index === 0
-                    ? 'bg-purple text-white'
-                    : 'bg-white border border-primary/15 text-gray-700'
-                "
-              >
-                {{ item.number }}
+              <div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full text-lg font-semibold z-10"
+                  :class="
+                    index === 0
+                      ? 'bg-purple text-white'
+                      : 'bg-white border border-primary/15 text-gray-700'
+                  "
+                >
+                  {{ item.number }}
+                </div>
               </div>
 
               <!-- content -->
               <div>
-                <h3 class="text-xl font-bold mb-5 text-primary">
+                <h3 class="text-xl font-bold sm:mb-5 mb-4 text-primary">
                   {{ item.title }}
                 </h3>
                 <p class="paragraph max-w-[340px]">
@@ -71,19 +73,31 @@ const timeline = [
           </div>
         </div>
         <div class="relative">
-          <div class="flex gap-2.5 z-9999 relative items-end h-full pb-[50px]">
-            <div class="p-9 bg-primary rounded-[10px]">
-              <h2 class="text-[46px] font-bold text-secondary">2586</h2>
-              <p class="text-xl font-medium text-white leading-6 max-w-[187px]">
+          <div
+            class="flex flex-wrap gap-2.5 z-9999 relative items-end h-full xl:pb-[50px] xl:pt-0 sm:pt-[40%] pt-[18%]"
+          >
+            <div class="2xl:p-9 sm:p-6 p-5 bg-primary rounded-[10px]">
+              <h2
+                class="2xl:text-[46px] sm:text-[40px] text-4xl font-bold text-secondary"
+              >
+                2586
+              </h2>
+              <p
+                class="lg:text-xl sm:text-lg text-base font-medium text-white sm:leading-6 leading-5 max-w-[187px]"
+              >
                 Telephone talk with our clients
               </p>
             </div>
-            <div class="p-9 bg-white rounded-[10px]">
-              <h2 class="text-[46px] font-bold text-purple">589</h2>
-              <p
-                class="text-xl font-medium text-primary leading-6 max-w-[187px]"
+            <div class="2xl:p-9 sm:p-6 p-5 bg-white rounded-[10px]">
+              <h2
+                class="2xl:text-[46px] sm:text-[40px] text-4xl font-bold text-purple"
               >
-                Website and Mobile App Design
+                589
+              </h2>
+              <p
+                class="lg:text-xl sm:text-lg text-base font-medium text-primary sm:leading-6 leading-5 max-w-[187px]"
+              >
+                Website Mobile App Design
               </p>
             </div>
           </div>
