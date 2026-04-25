@@ -7,6 +7,7 @@ import Agency from "../components/Agency.vue";
 import ChooseUs from "../components/ChooseUs.vue";
 import Feature from "../components/Feature.vue";
 import Project from "../components/Project.vue";
+import Testimonial from "../components/Testimonial.vue";
 </script>
 <template>
   <TopHeader />
@@ -17,4 +18,5 @@ import Project from "../components/Project.vue";
   <ChooseUs />
   <Feature />
   <Project />
+  <Testimonial />
 </template>

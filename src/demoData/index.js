@@ -353,3 +353,20 @@ export const itService = [
     active: false,
   },
 ];
+
+export const clientFeedback = [
+  {
+    name: "Jhon Deo",
+    title: "Supper IT solution agency",
+    dsgn: "Desinger",
+    review:
+      "As a strategy consultancy, we’re constantly multiple projects which meant we had little resources left our online marketing. we were also reluctant to partner with marketing agencies as most package.!",
+  },
+  {
+    name: "Jhon",
+    title: "Software Development Company",
+    dsgn: "Developer",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus ab praesentium quaerat maiores expedita nam deleniti, nulla sed cupiditate.",
+  },
+];
