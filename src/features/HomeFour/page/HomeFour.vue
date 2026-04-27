@@ -8,6 +8,10 @@ import ChooseUs from "../components/ChooseUs.vue";
 import Feature from "../components/Feature.vue";
 import Project from "../components/Project.vue";
 import Testimonial from "../components/Testimonial.vue";
+import WorkStep from "../components/WorkStep.vue";
+import Blog from "../components/Blog.vue";
+import ClientSlider from "@/features/HomeThree/ClientSlider.vue";
+import Footer from "@/components/common/footer/Footer.vue";
 </script>
 <template>
   <TopHeader />
@@ -19,4 +23,8 @@ import Testimonial from "../components/Testimonial.vue";
   <Feature />
   <Project />
   <Testimonial />
+  <WorkStep />
+  <Blog />
+  <ClientSlider />
+  <Footer />
 </template>

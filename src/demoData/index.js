@@ -66,6 +66,13 @@ import itService02 from "@/assets/img/homeFour/service-02.png";
 import itService03 from "@/assets/img/homeFour/service-03.png";
 import itService04 from "@/assets/img/homeFour/service-04.png";
 
+import b01 from "@/assets/img/homeFour/blog01.png";
+import b02 from "@/assets/img/homeFour/blog02.png";
+import b03 from "@/assets/img/homeFour/blog03.png";
+import au01 from "@/assets/img/homeFour/author01.png";
+import au02 from "@/assets/img/homeFour/author02.png";
+import au03 from "@/assets/img/homeFour/author03.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -368,5 +375,39 @@ export const clientFeedback = [
     dsgn: "Developer",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus ab praesentium quaerat maiores expedita nam deleniti, nulla sed cupiditate.",
+  },
+];
+
+// blogData.js
+export const blogsFour = [
+  {
+    id: 1,
+    name: "David Marlon",
+    role: "Junior executive",
+    date: "Jan 12, 2024",
+    image: b01,
+    title: "Our Mission Is To Revolutionize Of Creative Work For Companies",
+    featured: false,
+    author: au01,
+  },
+  {
+    id: 2,
+    name: "David Marlon",
+    role: "Junior executive",
+    date: "Jan 12, 2024",
+    image: b02,
+    title: "Our Mission Is To Revolutionize Of Creative Work For Companies",
+    featured: true,
+    author: au02,
+  },
+  {
+    id: 3,
+    name: "David Marlon",
+    role: "Junior executive",
+    date: "Jan 12, 2024",
+    image: b03,
+    title: "Our Mission Is To Revolutionize Of Creative Work For Companies",
+    featured: false,
+    author: au03,
   },
 ];
