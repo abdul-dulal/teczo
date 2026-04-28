@@ -22,6 +22,11 @@ const routes = [
     name: "HomeFour",
     component: () => import("@/features/HomeFour/page/HomeFour.vue"),
   },
+  {
+    path: "/home-five",
+    name: "HomeFive",
+    component: () => import("@/features/HomeFive/page/HomeFive.vue"),
+  },
 ];
 
 const router = createRouter({

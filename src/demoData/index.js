@@ -73,6 +73,10 @@ import au01 from "@/assets/img/homeFour/author01.png";
 import au02 from "@/assets/img/homeFour/author02.png";
 import au03 from "@/assets/img/homeFour/author03.png";
 
+import servicef01 from "@/assets/img/homefive/s01.png";
+import servicef02 from "@/assets/img/homefive/s02.png";
+import servicef03 from "@/assets/img/homefive/s03.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -190,6 +194,7 @@ export const menu = [
       { name: "Home Two", path: "/home-two" },
       { name: "Home Three", path: "/home-three" },
       { name: "Home Four", path: "/home-four" },
+      { name: "Home Five", path: "/home-five" },
     ],
   },
   { name: "About", path: "/about" },
@@ -378,7 +383,6 @@ export const clientFeedback = [
   },
 ];
 
-// blogData.js
 export const blogsFour = [
   {
     id: 1,
@@ -409,5 +413,35 @@ export const blogsFour = [
     title: "Our Mission Is To Revolutionize Of Creative Work For Companies",
     featured: false,
     author: au03,
+  },
+];
+
+export const servicesFive = [
+  {
+    id: 1,
+    title: "Cyber Security Solution",
+    description:
+      "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
+    image: servicef01,
+    icon: "cpu",
+    active: false,
+  },
+  {
+    id: 2,
+    title: "Data Visualization",
+    description:
+      "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
+    image: servicef02,
+    icon: "refresh-cw",
+    active: true,
+  },
+  {
+    id: 3,
+    title: "IT Consultation",
+    description:
+      "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
+    image: servicef03,
+    icon: "monitor",
+    active: false,
   },
 ];

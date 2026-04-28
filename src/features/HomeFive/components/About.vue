@@ -1,0 +1,132 @@
+<script setup>
+import about from "@/assets/img/homefive/about.png";
+import videobg from "@/assets/img/homefive/video-bg.png";
+import arrowbig from "@/assets/img/homeFour/arrow-big.png";
+import arrow from "@/assets/img/homeFour/arrow.png";
+import { onMounted, ref } from "vue";
+import Button from "@/components/base/Button.vue";
+import icon from "@/assets/img/homeThree/cloud.svg";
+import circle from "@/assets/img/homeFour/circle.png";
+import VideoModal from "@/features/home/components/VideoModal.vue";
+
+const progressList = ref([{ label: "Technology", value: 85, current: 0 }]);
+onMounted(() => {
+  progressList.value.forEach((item, index) => {
+    setTimeout(() => {
+      item.current = item.value;
+    }, index * 300);
+  });
+});
+
+let showModal = ref(false);
+const openModal = () => {
+  showModal.value = true;
+};
+
+const closeModal = () => {
+  showModal.value = false;
+};
+</script>
+<template>
+  <section class="section-base relative">
+    <div class="absolute right-0 bottom-[100px] 2xl:block hidden">
+      <img :src="circle" alt="Circle" />
+    </div>
+    <div class="container">
+      <div class="grid md:grid-cols-2 2xl:gap-20 gap-10">
+        <div class="relative">
+          <img :src="about" alt="About" />
+          <div class="absolute right-0 bottom-28">
+            <div class="relative">
+              <img :src="videobg" alt="Background" />
+              <button
+                class="size-[100px] rounded-full bg-secondary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-2xl cursor-pointer"
+                @click="openModal"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute 2xl:right-[10%] xl:right-[8%] xl:block hidden top-5"
+          >
+            <div class="relative">
+              <img :src="arrowbig" alt="Arrow" />
+              <img class="absolute top-10 -left-2" :src="arrow" alt="Arrow" />
+            </div>
+          </div>
+
+          <div
+            class="absolute -left-6 bottom-4 w-[114px] xl:block hidden h-[151px] bg-purple rounded-[10px] transform rotate-[-199deg] z-0"
+          ></div>
+
+          <div
+            class="absolute left-0 bottom-0 bg-white w-[152px] h-[150px] z-10 rounded-tl-[10px] rounded-tr-[10px] rounded-bl-[10px] flex flex-col items-center justify-center"
+          >
+            <h2 class="heading-one text-primary font-bold">12+</h2>
+            <p class="max-w-[100px] paragraph text-text">Top agency awards</p>
+          </div>
+        </div>
+        <div>
+          <h6 class="heading-six">Welcome to Our Teczo</h6>
+          <h2 class="heading-one max-w-[514px]">
+            Best IT Technology Services You Can Trust
+          </h2>
+          <h5 class="heading-six font-bold text-purple sm:mb-6 mb-4">
+            The professional approach to technology.
+          </h5>
+          <p class="paragraph text-text max-w-[509px] sm:mb-6 mb-4">
+            Integer fringilla sed lacus non venenatis. Vivamus turpis ex,
+            suscipit sit amet lorem ut, viverra dictum purus. Sed nec arcu id
+            nunc ut enim dignissim, condimentum rhoncus arcu gravida.
+          </p>
+
+          <div class="sm:my-8 my-6 flex justify-between items-center">
+            <div class="flex gap-[15px]">
+              <div>
+                <component :is="icon" class="mt-1" />
+              </div>
+              <div class="">
+                <h6 class="heading-six text-purple">Cloud Based</h6>
+                <p class="paragraph text-text">
+                  Integer fringilla sed lacus non venenatis. Vivamus turpis
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-[15px]">
+              <div>
+                <component :is="icon" class="mt-1" />
+              </div>
+              <div>
+                <h6 class="heading-six text-purple">Full backup</h6>
+                <p class="paragraph text-text">
+                  Integer fringilla sed lacus non venenatis. Vivamus turpis
+                </p>
+              </div>
+            </div>
+          </div>
+          <div v-for="(item, index) in progressList" :key="index">
+            <div class="flex justify-between text-primary mb-3">
+              <span class="heading-six font-bold">{{ item.label }}</span>
+              <span class="heading-six font-bold">{{ item.value }}%</span>
+            </div>
+
+            <div
+              class="w-full h-3 bg-gray-200 rounded-full overflow-hidden mb-6"
+            >
+              <div
+                class="h-full bg-purple-600 rounded-full transition-all duration-1000 ease-out"
+                :style="{ width: item.current + '%' }"
+              ></div>
+            </div>
+          </div>
+          <Button
+            btnTitle="Discover More"
+            class="bg-transparent border border-primary text-primary 2xl:py-[25px] py-3.5 mt-3"
+          />
+        </div>
+      </div>
+    </div>
+    <VideoModal :showModal="showModal" @closeModal="closeModal" />
+  </section>
+</template>
