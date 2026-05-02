@@ -11,7 +11,7 @@ import PricePlan from "@/features/HomeTwo/components/PricePlan.vue";
 import Testimonial from "@/features/HomeTwo/components/Testimonial.vue";
 import Services from "../components/Services.vue";
 import Faq from "../components/Faq.vue";
-import ClientSlider from "../ClientSlider.vue";
+import ClientSlider from "../components/ClientSlider.vue";
 import Feature from "../components/Feature.vue";
 import FooterTwo from "@/components/common/footer/FooterTwo.vue";
 </script>

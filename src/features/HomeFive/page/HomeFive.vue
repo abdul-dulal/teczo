@@ -1,9 +1,13 @@
 <script setup>
+import Project from "@/features/HomeFour/components/Project.vue";
 import About from "../components/About.vue";
 import Header from "../components/Header.vue";
 import Hero from "../components/Hero.vue";
 import Service from "../components/Service.vue";
 import TopHeader from "../components/TopHeader.vue";
+import ChooseUs from "@/features/HomeFour/components/ChooseUs.vue";
+import Management from "../components/Management.vue";
+import ClientTestimonial from "../components/ClientTestimonial.vue";
 </script>
 <template>
   <TopHeader />
@@ -11,4 +15,8 @@ import TopHeader from "../components/TopHeader.vue";
   <Hero />
   <About />
   <Service />
+  <Project />
+  <ChooseUs />
+  <Management />
+  <ClientTestimonial />
 </template>

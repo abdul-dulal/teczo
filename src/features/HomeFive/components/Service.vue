@@ -1,14 +1,5 @@
 <script setup>
 import { servicesFive } from "@/demoData";
-import { Cpu, RefreshCw, Monitor } from "lucide-vue-next";
-
-const icons = {
-  cpu: Cpu,
-  "refresh-cw": RefreshCw,
-  monitor: Monitor,
-};
-
-const getIcon = (name) => icons[name];
 </script>
 <template>
   <section class="bg-bg section-base">
@@ -22,43 +13,35 @@ const getIcon = (name) => icons[name];
         We provide our clients best IT services
       </h2>
 
-      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 relative">
-        <div
-          class="hidden md:block absolute top-1/2 left-0 w-full border-t border-dashed border-cyan-400 opacity-40"
-        ></div>
-
+      <div class="grid md:grid-cols-3 gap-6 relative">
         <div
           v-for="item in servicesFive"
           :key="item.id"
-          class="relative rounded-2xl overflow-hidden transition-all duration-300"
-          :class="
-            item.active
-              ? 'bg-teal-400 text-black scale-105'
-              : 'bg-[#1e293b] text-white'
-          "
+          class="group relative rounded-[20px] overflow-hidden transition-all p-[15px] border border-white/10 hover:bg-secondary ease-in-out duration-500"
         >
           <!-- Image -->
-          <img :src="item.image" class="w-full h-48 object-cover" />
+          <img :src="item.image" class="w-full object-cover rounded-2xl" />
 
           <!-- Content -->
           <div class="p-6 relative">
-            <!-- Icon -->
             <div
-              class="absolute -top-6 left-6 w-12 h-12 flex items-center justify-center rounded-lg shadow-lg"
-              :class="
-                item.active
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-cyan-400 text-black'
-              "
+              class="absolute -top-16 left-7 size-[100px] flex items-center justify-center rounded-[10px] bg-secondary group-hover:bg-purple transition-all ease-in-out duration-500"
             >
-              <component :is="getIcon(item.icon)" class="w-5 h-5" />
+              <component
+                :is="item.icon"
+                class="text-primary group-hover:text-white [&_*]:fill-current [&_*]:!fill-current transition-all ease-in-out duration-500"
+              />
             </div>
 
-            <h3 class="mt-6 font-semibold text-lg">
+            <h3
+              class="heading-four text-white mt-6 group-hover:text-primary transition-all ease-in-out duration-500"
+            >
               {{ item.title }}
             </h3>
 
-            <p class="mt-2 text-sm opacity-80">
+            <p
+              class="paragraph text-text group-hover:text-primary transition-all ease-in-out duration-500"
+            >
               {{ item.description }}
             </p>
           </div>

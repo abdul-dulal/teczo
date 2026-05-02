@@ -76,6 +76,9 @@ import au03 from "@/assets/img/homeFour/author03.png";
 import servicef01 from "@/assets/img/homefive/s01.png";
 import servicef02 from "@/assets/img/homefive/s02.png";
 import servicef03 from "@/assets/img/homefive/s03.png";
+import ic01 from "@/assets/img/homefive/cpu.svg";
+import ic02 from "@/assets/img/homefive/refresh.svg";
+import ic03 from "@/assets/img/homefive/monitor.svg";
 
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
@@ -423,8 +426,7 @@ export const servicesFive = [
     description:
       "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
     image: servicef01,
-    icon: "cpu",
-    active: false,
+    icon: ic01,
   },
   {
     id: 2,
@@ -432,8 +434,7 @@ export const servicesFive = [
     description:
       "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
     image: servicef02,
-    icon: "refresh-cw",
-    active: true,
+    icon: ic02,
   },
   {
     id: 3,
@@ -441,7 +442,6 @@ export const servicesFive = [
     description:
       "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
     image: servicef03,
-    icon: "monitor",
-    active: false,
+    icon: ic03,
   },
 ];

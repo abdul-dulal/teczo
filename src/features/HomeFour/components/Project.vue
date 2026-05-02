@@ -60,9 +60,9 @@ const slides = [
 
     <div class="w-full">
       <Swiper
+        :autoplay="{ delay: 3000 }"
         :modules="[Autoplay]"
         :slides-per-view="3"
-        :autoplay="{ delay: 3000 }"
         :space-between="24"
         :loop="true"
         :breakpoints="{
@@ -82,12 +82,14 @@ const slides = [
                 class="bg-[#F7F7F9] rounded-tl-[20px] p-10 flex items-center justify-between shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all ease-in-out duration-500"
               >
                 <div class="relative">
-                  <div class="flex gap-[30px]">
-                    <span
-                      class="text-xs text-gray-400 border px-2 py-1 rounded"
-                    >
-                      {{ item.tag }}
-                    </span>
+                  <div class="flex gap-[30px] items-center">
+                    <div class="mt-1">
+                      <button
+                        class="text-xs text-gray-400 border px-2 py-1 rounded"
+                      >
+                        {{ item.tag }}
+                      </button>
+                    </div>
                     <h5 class="heading-five text-primary">
                       {{ item.title }}
                     </h5>

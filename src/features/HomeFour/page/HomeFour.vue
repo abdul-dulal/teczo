@@ -10,7 +10,7 @@ import Project from "../components/Project.vue";
 import Testimonial from "../components/Testimonial.vue";
 import WorkStep from "../components/WorkStep.vue";
 import Blog from "../components/Blog.vue";
-import ClientSlider from "@/features/HomeThree/ClientSlider.vue";
+import ClientSlider from "@/features/HomeThree/components/ClientSlider.vue";
 import Footer from "@/components/common/footer/Footer.vue";
 </script>
 <template>
