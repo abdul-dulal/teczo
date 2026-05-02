@@ -8,6 +8,7 @@ import TopHeader from "../components/TopHeader.vue";
 import ChooseUs from "@/features/HomeFour/components/ChooseUs.vue";
 import Management from "../components/Management.vue";
 import ClientTestimonial from "../components/ClientTestimonial.vue";
+import Business from "../components/Business.vue";
 </script>
 <template>
   <TopHeader />
@@ -19,4 +20,5 @@ import ClientTestimonial from "../components/ClientTestimonial.vue";
   <ChooseUs />
   <Management />
   <ClientTestimonial />
+  <Business />
 </template>

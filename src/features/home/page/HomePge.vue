@@ -21,10 +21,10 @@ import Footer from "@/components/common/footer/Footer.vue";
   <About />
   <!-- <Services /> -->
   <!-- <Showcase /> -->
-  <Award />
-  <Solution />
-  <Slider />
-  <!-- <Business /> -->
+  <!-- <Award /> -->
+  <!-- <Solution /> -->
+  <!-- <Slider /> -->
+  <Business />
   <!-- <Faq /> -->
   <!-- <Blog /> -->
   <!-- <Footer /> -->

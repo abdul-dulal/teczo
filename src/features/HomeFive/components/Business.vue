@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import business from "@/assets/img/home/business.png";
+import feature from "@/assets/img/homefive/feature.png";
 import shape from "@/assets/img/home/in-shape.png";
 import star from "@/assets/img/home/color-start.png";
 import wave from "@/assets/img/home/color-wave.png";
@@ -36,7 +36,7 @@ onMounted(() => {
           <div class="absolute bottom-10 left-[16%]">
             <img :src="star" alt="Star" />
           </div>
-          <img :src="business" alt="Business" />
+          <img :src="feature" alt="feature" />
         </div>
 
         <div
