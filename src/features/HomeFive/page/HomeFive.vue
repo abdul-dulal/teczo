@@ -9,6 +9,10 @@ import ChooseUs from "@/features/HomeFour/components/ChooseUs.vue";
 import Management from "../components/Management.vue";
 import ClientTestimonial from "../components/ClientTestimonial.vue";
 import Business from "../components/Business.vue";
+import TechService from "../components/TechService.vue";
+import Services from "@/features/HomeThree/components/Services.vue";
+import Blog from "@/features/HomeFour/components/Blog.vue";
+import NewsLetter from "../components/NewsLetter.vue";
 </script>
 <template>
   <TopHeader />
@@ -21,4 +25,8 @@ import Business from "../components/Business.vue";
   <Management />
   <ClientTestimonial />
   <Business />
+  <TechService />
+  <Services />
+  <Blog />
+  <NewsLetter />
 </template>

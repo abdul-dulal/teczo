@@ -80,6 +80,10 @@ import ic01 from "@/assets/img/homefive/cpu.svg";
 import ic02 from "@/assets/img/homefive/refresh.svg";
 import ic03 from "@/assets/img/homefive/monitor.svg";
 
+import ts01 from "@/assets/img/homefive/service01.png";
+import ts02 from "@/assets/img/homefive/service02.png";
+import ts03 from "@/assets/img/homefive/service03.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -443,5 +447,23 @@ export const servicesFive = [
       "Integer fringilla sed lacus non venenatis. Viva mus turpis ex, suscipit sit amet lorem",
     image: servicef03,
     icon: ic03,
+  },
+];
+
+export const techService = [
+  {
+    id: 1,
+    title: "Product designing",
+    image: ts01,
+  },
+  {
+    id: 2,
+    title: "Custom solutions",
+    image: ts02,
+  },
+  {
+    id: 3,
+    title: "Tech outsource",
+    image: ts02,
   },
 ];
