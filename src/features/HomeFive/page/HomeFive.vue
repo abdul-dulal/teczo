@@ -13,6 +13,7 @@ import TechService from "../components/TechService.vue";
 import Services from "@/features/HomeThree/components/Services.vue";
 import Blog from "@/features/HomeFour/components/Blog.vue";
 import NewsLetter from "../components/NewsLetter.vue";
+import Footer from "../Footer.vue";
 </script>
 <template>
   <TopHeader />
@@ -29,4 +30,5 @@ import NewsLetter from "../components/NewsLetter.vue";
   <Services />
   <Blog />
   <NewsLetter />
+  <Footer />
 </template>
