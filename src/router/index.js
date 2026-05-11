@@ -27,6 +27,11 @@ const routes = [
     name: "HomeFive",
     component: () => import("@/features/HomeFive/page/HomeFive.vue"),
   },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("@/features/about/page/AboutPage.vue"),
+  },
 ];
 
 const router = createRouter({
