@@ -19,10 +19,10 @@ import Footer from "@/components/common/footer/Footer.vue";
   <Header />
   <Hero />
   <About />
-  <!-- <Services /> -->
-  <!-- <Showcase /> -->
-  <!-- <Award /> -->
-  <!-- <Solution /> -->
+  <Services />
+  <Showcase />
+  <Award />
+  <Solution />
   <!-- <Slider /> -->
   <Business />
   <!-- <Faq /> -->
