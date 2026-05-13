@@ -7,16 +7,17 @@ import Business from "@/features/HomeFive/components/Business.vue";
 import Team from "@/features/HomeTwo/components/Team.vue";
 import Feature from "@/features/HomeThree/components/Feature.vue";
 import FooterTwo from "@/components/common/footer/FooterTwo.vue";
+import featureImg from "@/assets/img/other/feature.png";
 </script>
 <template>
   <div>
-    <BreadCumb />
+    <BreadCumb title="About Us" />
     <Technology />
     <Solution />
     <ClientTestimonial />
     <Business />
     <Team />
-    <Feature />
+    <Feature :img="featureImg" />
     <FooterTwo />
   </div>
 </template>

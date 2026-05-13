@@ -4,18 +4,19 @@ import virtual from "@/assets/img/home/virtual.png";
 import wave from "@/assets/img/home/wave02.png";
 import blog01 from "@/assets/img/homeThree/blog01.png";
 import blog02 from "@/assets/img/homeThree/blog02.png";
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
-  <div class="bg-bg section-base relative">
-    <div class="absolute top-0 right-0">
+  <div class="bg-bg pt-[120px] pb-9 relative overflow-hidden">
+    <div class="absolute top-4 right-0">
       <img :src="virtual" alt="Virtual" />
     </div>
     <div class="absolute top-0 left-0">
       <img :src="wave" alt="Wave" />
     </div>
     <div class="container">
-      <div class="flex justify-between">
+      <div class="flex justify-between border-b border-white/15 pb-10">
         <div class="space-y-7">
           <img :src="logo" alt="Logo" />
           <p class="paragraph text-white/75 max-w-[273px]">
@@ -187,6 +188,12 @@ import blog02 from "@/assets/img/homeThree/blog02.png";
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-[30px]">
+        <p class="paragraph text-white/75 font-inter mb-0 font-medium">
+          Copyright &copy; {{ currentYear }}
+          <span class="text-secondary">Teczo</span>. All Rights Reserved.
+        </p>
       </div>
     </div>
   </div>

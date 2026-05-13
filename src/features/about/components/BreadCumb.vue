@@ -15,6 +15,9 @@ const options = [
   { label: "French", value: "fr" },
   { label: "Dutch", value: "ds" },
 ];
+defineProps({
+  title: String,
+});
 </script>
 <template>
   <section
@@ -215,11 +218,11 @@ const options = [
         </div>
       </div>
       <div class="text-center py-[134px]">
-        <h2 class="heading-one text-white mb-4">About Us</h2>
+        <h2 class="heading-one text-white mb-4">{{ title }}</h2>
         <div class="flex gap-2 items-center text-white justify-center">
-          <p>Home</p>
+          <router-link to="/" class=""> Home</router-link>
           /
-          <router-link to="/" class="text-secondary"> About Us</router-link>
+          <p class="text-secondary">{{ title }}</p>
         </div>
       </div>
     </div>

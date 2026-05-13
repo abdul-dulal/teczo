@@ -14,6 +14,7 @@ import Faq from "../components/Faq.vue";
 import ClientSlider from "../components/ClientSlider.vue";
 import Feature from "../components/Feature.vue";
 import FooterTwo from "@/components/common/footer/FooterTwo.vue";
+import banner from "@/assets/img/homeThree/bg.png";
 </script>
 <template>
   <TopHeader />
@@ -29,6 +30,6 @@ import FooterTwo from "@/components/common/footer/FooterTwo.vue";
   <Services />
   <Faq />
   <ClientSlider />
-  <Feature />
+  <Feature :img="banner" />
   <FooterTwo />
 </template>
