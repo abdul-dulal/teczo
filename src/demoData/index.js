@@ -31,6 +31,9 @@ import C06 from "@/assets/img/homeTwo/c-06.svg";
 import tm01 from "@/assets/img/homeTwo/team-01.png";
 import tm02 from "@/assets/img/homeTwo/team-02.png";
 import tm03 from "@/assets/img/homeTwo/team-03.png";
+import tm04 from "@/assets/img/homeTwo/team-04.png";
+import tm05 from "@/assets/img/homeTwo/team-05.png";
+import tm06 from "@/assets/img/homeTwo/team-06.png";
 
 import cs01 from "@/assets/img/homeThree/cs01.png";
 import cs02 from "@/assets/img/homeThree/cs02.png";
@@ -187,9 +190,12 @@ export const ourClients = [
 ];
 
 export const teamMembers = [
-  { name: "Hanna Marriez", img: tm01, design: "HR Manager" },
-  { name: "David Brumha", img: tm02, design: "Executive Officer" },
-  { name: "Brandon Hussey", img: tm03, design: "Co Founder" },
+  { name: "Hanna Marriez", img: tm01, design: "Founder" },
+  { name: "David Brumha", img: tm02, design: "Co Founder " },
+  { name: "Brandon Hussey", img: tm03, design: "HR Manager" },
+  { name: "Paual Piterson", img: tm04, design: "Executive Officer" },
+  { name: "Neelam Bhaduri", img: tm05, design: "Designer" },
+  { name: "Jesica Shabnam", img: tm06, design: "Developer" },
 ];
 
 export const menu = [
@@ -205,7 +211,18 @@ export const menu = [
     ],
   },
   { name: "About", path: "/about" },
-  { name: "Pages", path: "/pages" },
+
+  {
+    name: "Pages",
+    path: "/pages",
+    children: [
+      { name: "Team", path: "/team" },
+      { name: "Home Two", path: "/home-two" },
+      { name: "Home Three", path: "/home-three" },
+      { name: "Home Four", path: "/home-four" },
+      { name: "Home Five", path: "/home-five" },
+    ],
+  },
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Blog", path: "/blog" },

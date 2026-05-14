@@ -3,15 +3,21 @@ import { teamMembers } from "@/demoData";
 import fb from "@/assets/img/homeTwo/fb.svg";
 import linkedin from "@/assets/img/homeTwo/linkedin.svg";
 import twitter from "@/assets/img/homeTwo/twitter.svg";
+defineProps({
+  showTitle: { type: Boolean, default: true },
+  sliceNumber: { type: Number, default: 3 },
+});
 </script>
 <template>
   <div class="section-base">
     <div class="container">
-      <h6 class="heading-six text-purple">Our Team Members</h6>
-      <h2 class="heading-one mt-5">Meet with our iT Experets</h2>
+      <div v-if="showTitle">
+        <h6 class="heading-six text-purple">Our Team Members</h6>
+        <h2 class="heading-one mt-5">Meet with our iT Experets</h2>
+      </div>
       <div class="grid grid-cols-3 gap-[30px] mt-7">
         <div
-          v-for="(item, index) in teamMembers"
+          v-for="(item, index) in teamMembers.slice(0, sliceNumber)"
           :key="index"
           class="group relative"
         >
