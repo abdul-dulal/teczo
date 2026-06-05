@@ -218,7 +218,7 @@ export const menu = [
     children: [
       { name: "Team", path: "/team" },
       { name: "Team Details", path: "/team-details" },
-      { name: "Home Three", path: "/home-three" },
+      { name: "Testimonial", path: "/testmonial" },
       { name: "Home Four", path: "/home-four" },
       { name: "Home Five", path: "/home-five" },
     ],
