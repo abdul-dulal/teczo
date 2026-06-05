@@ -2,6 +2,21 @@
 import member from "@/assets/img/homeTwo/team-member.png";
 import { ref } from "vue";
 const activeBtn = ref("Dribbble");
+
+const skills = [
+  {
+    title: "User experience",
+    value: 70,
+  },
+  {
+    title: "Development",
+    value: 40,
+  },
+  {
+    title: "Space Grotesk",
+    value: 80,
+  },
+];
 </script>
 <template>
   <div class="section-base">
@@ -60,7 +75,7 @@ const activeBtn = ref("Dribbble");
               Meduim
             </button>
           </div>
-          <h6 class="text-xl font-bold mt-10 mb-5">Follow:</h6>
+          <h6 class="text-xl font-bold my-5">Follow:</h6>
           <div class="flex gap-2 items-center">
             <a
               href="https://www.facebook.com/"
@@ -130,6 +145,43 @@ const activeBtn = ref("Dribbble");
                 />
               </svg>
             </a>
+          </div>
+          <div class="my-5">
+            <h3 class="heading-three">Professional skills</h3>
+            <p class="paragraph my-5 max-w-[500px]">
+              I approach every client relationship with a unique & invigorating
+              perspective coupled with an unwavering energy
+            </p>
+            <div
+              v-for="item in skills"
+              :key="item.title"
+              class="mb-8 last:mb-0 max-w-[645px]"
+            >
+              <!-- Title -->
+              <h3 class="mb-4 text-lg font-medium leading-3">
+                {{ item.title }}
+              </h3>
+
+              <!-- Progress Wrapper -->
+              <div class="relative">
+                <!-- Gray Line -->
+                <div class="h-[7px] w-full rounded-full bg-[#dddddd]"></div>
+
+                <!-- Purple Line -->
+                <div
+                  class="absolute left-0 top-0 h-[7px] rounded-full bg-[#7C3AED]"
+                  :style="{ width: `${item.value}%` }"
+                ></div>
+
+                <!-- Circle -->
+                <div
+                  class="absolute top-1/2 flex h-[38px] w-[38px] shrink-0 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-[#7C3AED] bg-white text-[15px] font-medium leading-none text-[#7C3AED] shadow-[0_2px_6px_rgba(124,58,237,0.35)]"
+                  :style="{ left: `calc(${item.value}% - 19px)` }"
+                >
+                  {{ item.value }}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
