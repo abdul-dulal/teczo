@@ -1,12 +1,22 @@
 <script setup>
 import { ourClients } from "@/demoData";
 import { ArrowRight } from "@lucide/vue";
+
+defineProps({
+  isShow: {
+    type: Boolean,
+    default: true,
+  },
+});
 </script>
 
 <template>
   <section class="section-base">
     <div class="container">
-      <div class="max-w-[523px] mx-auto text-center">
+      <div
+        class="max-w-[523px] mx-auto text-center"
+        :class="isShow ? 'block' : 'hidden'"
+      >
         <h6 class="heading-six mb-5">Best technology agency</h6>
         <h2 class="heading-one mb-10">
           We provide our clients best IT services
@@ -46,7 +56,7 @@ import { ArrowRight } from "@lucide/vue";
           </div>
 
           <button
-            class="flex justify-between items-center px-[25px] mt-10 h-[52px] rounded-[10px] border border-primary/10 w-full group-hover:bg-purple group-hover:text-white text-base font-medium transition-all duration-500 ease-in-out"
+            class="flex justify-between items-center px-[25px] mt-10 h-[52px] rounded-[10px] border border-primary/10 w-full group-hover:bg-purple group-hover:text-white text-base font-medium transition-all duration-500 ease-in-out cursor-pointer"
           >
             Read More
             <span> <arrow-right /></span>

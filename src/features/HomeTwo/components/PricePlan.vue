@@ -1,7 +1,53 @@
+<script setup>
+import { ArrowRight, Check } from "lucide-vue-next";
+
+const plans = [
+  {
+    title: "Basic plan",
+    price: 265,
+    active: false,
+    features: [
+      "Assessment & strategy consultation",
+      "Email & collaboration tools setup",
+      "Hardware recommendations",
+      "Cloud computing advisory",
+      "Basic cybersecurity audit",
+    ],
+  },
+  {
+    title: "Standard plan",
+    price: 265,
+    active: true, // 🔥 middle one highlight
+    features: [
+      "Assessment & strategy consultation",
+      "Email & collaboration tools setup",
+      "Hardware recommendations",
+      "Cloud computing advisory",
+      "Basic cybersecurity audit",
+    ],
+  },
+  {
+    title: "Premium plan",
+    price: 265,
+    active: false,
+    features: [
+      "Assessment & strategy consultation",
+      "Email & collaboration tools setup",
+      "Hardware recommendations",
+      "Cloud computing advisory",
+      "Basic cybersecurity audit",
+    ],
+  },
+];
+defineProps({
+  isShow: Boolean,
+});
+</script>
+
 <template>
   <div class="section-base">
     <div class="container">
-      <div class="max-w-[640px] mx-auto">
+      <div class="max-w-[640px] mx-auto" :class="isShow ? 'block' : 'hidden'">
         <h6 class="heading-six mb-5 text-center text-purple">
           Our Pricing Plans
         </h6>
@@ -88,46 +134,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ArrowRight, Check } from "lucide-vue-next";
-
-const plans = [
-  {
-    title: "Basic plan",
-    price: 265,
-    active: false,
-    features: [
-      "Assessment & strategy consultation",
-      "Email & collaboration tools setup",
-      "Hardware recommendations",
-      "Cloud computing advisory",
-      "Basic cybersecurity audit",
-    ],
-  },
-  {
-    title: "Standard plan",
-    price: 265,
-    active: true, // 🔥 middle one highlight
-    features: [
-      "Assessment & strategy consultation",
-      "Email & collaboration tools setup",
-      "Hardware recommendations",
-      "Cloud computing advisory",
-      "Basic cybersecurity audit",
-    ],
-  },
-  {
-    title: "Premium plan",
-    price: 265,
-    active: false,
-    features: [
-      "Assessment & strategy consultation",
-      "Email & collaboration tools setup",
-      "Hardware recommendations",
-      "Cloud computing advisory",
-      "Basic cybersecurity audit",
-    ],
-  },
-];
-</script>

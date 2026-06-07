@@ -47,6 +47,26 @@ const routes = [
     name: "Testimonial",
     component: () => import("@/features/testimonial/page/Testimonial.vue"),
   },
+  {
+    path: "/price-plan",
+    name: "Priceplan",
+    component: () => import("@/features/pricePlan/page/PricePlan.vue"),
+  },
+  {
+    path: "/faq",
+    name: "Our Faq",
+    component: () => import("@/features/faq/page/Faq.vue"),
+  },
+  {
+    path: "/services",
+    name: "Our Services",
+    component: () => import("@/features/services/page/Services.vue"),
+  },
+  {
+    path: "/service-details",
+    name: "Service Details",
+    component: () => import("@/features/service-details/page/page.vue"),
+  },
 ];
 
 const router = createRouter({

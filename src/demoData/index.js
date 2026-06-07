@@ -219,11 +219,20 @@ export const menu = [
       { name: "Team", path: "/team" },
       { name: "Team Details", path: "/team-details" },
       { name: "Testimonial", path: "/testmonial" },
-      { name: "Home Four", path: "/home-four" },
+      { name: "Price Plan", path: "/price-plan" },
+      { name: "Our Faq", path: "/faq" },
       { name: "Home Five", path: "/home-five" },
     ],
   },
-  { name: "Services", path: "/services" },
+  {
+    name: "Services",
+
+    children: [
+      { name: "Services", path: "/services" },
+      { name: "Services Details", path: "/service-details" },
+    ],
+  },
+
   { name: "Portfolio", path: "/portfolio" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
