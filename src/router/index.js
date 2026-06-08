@@ -72,6 +72,12 @@ const routes = [
     name: "Our Portfolio",
     component: () => import("@/features/portfolio/page/Portfolio.vue"),
   },
+  {
+    path: "/portfolio-details",
+    name: "Portfolio Details",
+    component: () =>
+      import("@/features/portfolio-details/page/PortfolioDetails.vue"),
+  },
 ];
 
 const router = createRouter({

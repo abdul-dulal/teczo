@@ -239,7 +239,15 @@ export const menu = [
     ],
   },
 
-  { name: "Portfolio", path: "/portfolio" },
+  {
+    name: "Portfolio",
+
+    children: [
+      { name: "Portfolio", path: "/portfolio" },
+      { name: "Portfolio Details", path: "/portfolio-details" },
+    ],
+  },
+
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
 ];
