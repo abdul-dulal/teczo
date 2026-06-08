@@ -4,7 +4,7 @@ import logo from "@/assets/img/logo/primary-logo.png";
 import Drawer from "@/components/common/header/Drawer.vue";
 import SearchPopup from "@/components/common/header/SearchPopup.vue";
 import { menu } from "@/demoData";
-import { Globe, Search } from "lucide-vue-next";
+import { Clock, Globe, Search } from "lucide-vue-next";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 const isSearchOpen = ref(false);
@@ -73,9 +73,7 @@ defineProps({
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="flex w-[100px] gap-3 items-center ml-[25px] xl:pr-0 pr-5"
-                    >
+                    <div class="flex w-[100px] gap-3 items-center ml-[25px] xl:pr-0 pr-5">
                       <a
                         href="https://www.facebook.com/"
                         target="_blank"

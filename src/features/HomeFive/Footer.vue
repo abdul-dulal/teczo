@@ -66,7 +66,7 @@ import logo from "@/assets/img/logo/teczo.png";
           Rights Reserved.
         </p>
 
-        <div className="flex  gap-3 items-center ml-4 xl:pr-0 pr-5">
+        <div class="flex gap-3 items-center ml-4 xl:pr-0 pr-5">
           <a
             href="https://www.facebook.com/"
             target="_blank"

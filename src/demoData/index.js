@@ -87,6 +87,12 @@ import ts01 from "@/assets/img/homefive/service01.png";
 import ts02 from "@/assets/img/homefive/service02.png";
 import ts03 from "@/assets/img/homefive/service03.png";
 
+import portfolio01 from "@/assets/img/portfolio/p01.png";
+import portfolio02 from "@/assets/img/portfolio/p02.png";
+import portfolio03 from "@/assets/img/portfolio/p03.png";
+import portfolio04 from "@/assets/img/portfolio/p04.png";
+import portfolio05 from "@/assets/img/portfolio/p05.png";
+
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
   { title: "Keyword optimization", img: keyword, number: "140k" },
@@ -491,5 +497,44 @@ export const techService = [
     id: 3,
     title: "Tech outsource",
     image: ts02,
+  },
+];
+
+export const portfolioData = [
+  {
+    id: 1,
+    img: portfolio01,
+    tech: "Technology",
+    title: "platform integration",
+  },
+  {
+    id: 2,
+    img: portfolio02,
+    tech: "Printing",
+    title: "product engineering",
+  },
+  {
+    id: 3,
+    img: portfolio03,
+    tech: "UX UI",
+    title: "growth startegies",
+  },
+  {
+    id: 4,
+    img: portfolio04,
+    tech: "Branding",
+    title: "innovative interface",
+  },
+  {
+    id: 5,
+    img: portfolio05,
+    tech: "Web Design",
+    title: "product design",
+  },
+  {
+    id: 6,
+    img: portfolio01,
+    tech: "Technology",
+    title: "Cyber Security",
   },
 ];

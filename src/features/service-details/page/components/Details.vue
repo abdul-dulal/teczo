@@ -6,6 +6,9 @@ import icon03 from "@/assets/img/service-details/sales.svg";
 import icon04 from "@/assets/img/service-details/campaign.svg";
 import icon05 from "@/assets/img/service-details/analytics.svg";
 import feature from "@/assets/img/service-details/feature.png";
+import { Mail, Phone } from "lucide-vue-next";
+import contact from "@/assets//img/service-details/contact.png";
+import target from "@/assets/img/service-details/target.png";
 
 const services = ref([
   {
@@ -13,7 +16,7 @@ const services = ref([
     icon: icon01,
     title: "Enterprise Services",
     image: feature,
-    description: "Working in the fields of UX design and product strategy.",
+    description: "",
   },
   {
     id: 2,
@@ -69,16 +72,16 @@ const submitForm = () => {
   <section class="section-base">
     <div class="container grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-20">
       <!-- LEFT SIDEBAR -->
-      <div class="space-y-5">
+      <div class="space-y-10">
         <!-- Menu -->
         <div
-          class="rounded-[20px] border border-[#1B1F2E26] p-10 overflow-hidden"
+          class="rounded-[20px] border border-[#1B1F2E26] px-8 py-[30px] overflow-hidden"
         >
           <button
             v-for="item in services"
             :key="item.id"
             @click="selectService(item)"
-            class="w-full flex items-center gap-3 pb-4 pt-3.5 text-lg font-inter font-normal cursor-pointer text-[#838694] border-b border-dashed border-[#1B1F2E26] last:border-b-0 transition-all"
+            class="w-full flex items-center gap-3 pb-4 last:pb-0 pt-3.5 text-lg font-inter font-normal cursor-pointer border-b border-dashed border-[#1B1F2E26] last:border-b-0 transition-all"
           >
             <component :is="item.icon" class="" />
             {{ item.title }}
@@ -86,30 +89,36 @@ const submitForm = () => {
         </div>
 
         <div
-          class="relative overflow-hidden rounded-xl p-6 text-white bg-[linear-gradient(180deg,_#4BF0C5_0%,_#6C33D9_100%)]"
+          class="relative overflow-hidden rounded-[20px] px-8 py-[30px] text-white bg-[linear-gradient(180deg,_#4BF0C5_0%,_#6C33D9_100%)]"
         >
-          <h3 class="font-bold text-lg mb-3">Have any questions</h3>
+          <h5 class="font-bold text-xl mb-4">Have any questions</h5>
 
-          <p class="text-sm opacity-90 mb-5">
-            We're available for support and consultation.
+          <p class="text-sm text-white/75 mb-5 max-w-[260px]">
+            We unleash your business potential by maximize business innovation
           </p>
 
           <button
-            class="bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-medium"
+            class="bg-white flex items-center gap-1.5 justify-center text-gray-700 px-4 py-4 rounded-lg text-sm font-normal cursor-pointer"
           >
-            📧 support@email.com
+            <mail size="14" /> binu@mail.com
+          </button>
+          <button
+            class="bg-transparente flex items-center gap-1.5 justify-center mt-2.5 px-4 py-4 rounded-lg text-sm font-normal cursor-pointer border border-white/25 text-white"
+          >
+            <phone size="14" />+123 2365 56894
           </button>
 
-          <div class="mt-4 text-sm font-medium">+1 (555) 123 4567</div>
-
           <!-- Floating Circle -->
-          <div
-            class="absolute -bottom-10 -right-10 w-36 h-36 rounded-full bg-white/10"
-          />
+          <div class="absolute bottom-0 right-8">
+            <img
+              :src="contact"
+              alt="Contact"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
-      <!-- RIGHT CONTENT -->
       <div class="bg-white rounded-xl">
         <img
           :src="activeService.image"
@@ -117,26 +126,35 @@ const submitForm = () => {
           class="w-full rounded-xl object-cover"
         />
 
-        <h2 class="text-3xl font-bold text-gray-900 mt-8">
+        <h3 class="heading-three font-bold text-gray-900 mt-8">
           {{ activeService.title }}
-        </h2>
+        </h3>
 
-        <p class="text-gray-600 mt-4 leading-7">
-          {{ activeService.description }}
+        <p class="text-lg font-normal text-[#5C6972] mt-4 leading-7">
+          IT company content is important for a number of reasons. First, it can
+          help you attract to be potential customers. When you create content
+          that is relevant to your target audience, you position yourself as an
+          expert in your field and increase the chances that potential customers
+          will find you. IT company content can help you educate potential
+          customers about your products and services.
         </p>
 
-        <p class="text-gray-600 mt-4 leading-7">
-          We are committed to providing solutions with quality support and
-          long-term business growth.
+        <p class="text-lg font-normal text-[#5C6972] mt-4 leading-7">
+          We are committed to providing our clients with the highest quality IT
+          services and support. We understand that IT is essential for your
+          business, and we will work tirelessly to help you achieve your
+          business goals.
         </p>
 
         <!-- Benefits -->
         <div class="mt-10">
-          <h3 class="text-2xl font-bold mb-4">Plan Benefits</h3>
+          <h3 class="font-bold mb-4 heading-three">Plan Benefits</h3>
 
-          <p class="text-gray-600 mb-8">
-            The world of digital innovation is evolving. We help businesses
-            create better experiences and measurable growth.
+          <p class="text-lg font-normal text-[#5C6972] mb-8">
+            The world of mobile is constantly evolving, and with it, the way we
+            interact with our devices. As mobile UX designers, it's our job to
+            stay ahead of the curve and create experiences that are both
+            intuitive and engaging.
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -148,8 +166,10 @@ const submitForm = () => {
               </div>
 
               <div>
-                <h4 class="font-semibold text-sm">Better Skills</h4>
-                <p class="text-xs text-gray-500">Improve workflow</p>
+                <h4 class="font-bold text-base">
+                  Client with <br />
+                  audience
+                </h4>
               </div>
             </div>
 
@@ -161,8 +181,10 @@ const submitForm = () => {
               </div>
 
               <div>
-                <h4 class="font-semibold text-sm">Growth Strategy</h4>
-                <p class="text-xs text-gray-500">Better performance</p>
+                <h4 class="font-bold text-base">
+                  Coordinate with <br />
+                  agencies
+                </h4>
               </div>
             </div>
 
@@ -174,36 +196,40 @@ const submitForm = () => {
               </div>
 
               <div>
-                <h4 class="font-semibold text-sm">Reliable Support</h4>
-                <p class="text-xs text-gray-500">Professional team</p>
+                <h4 class="font-bold text-base">
+                  Pull your social <br />
+                  data studies
+                </h4>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Stat Card -->
         <div
-          class="bg-gray-50 rounded-xl p-6 mt-8 flex flex-col md:flex-row gap-4 items-center"
+          class="bg-[#F7F7F9] rounded-[20px] px-8 py-6 mt-8 flex flex-col md:flex-row gap-4 items-center"
         >
-          <div
-            class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-3xl"
-          >
-            🎯
+          <div>
+            <div class="size-[125px]">
+              <img :src="target" alt="Target" />
+            </div>
           </div>
 
           <div>
-            <h4 class="font-semibold">User Driven Strategy</h4>
-
-            <p class="text-gray-600 text-sm mt-2">
-              We understand how to deliver complete digital solutions focused on
-              measurable business growth and customer satisfaction.
+            <p class="text-text text-base font-normal mt-2">
+              We understand that in today's competitive online world, a strong
+              SEO strategy is crucial for businesses to succeed. Our data-driven
+              approach and in-depth industry knowledge enable.
             </p>
+            <h5 class="text-xl font-medium">
+              Liza Olivers |
+              <span class="text-lg text-text ml-1">Marketing manager</span>
+            </h5>
           </div>
         </div>
 
         <!-- Contact Form -->
         <div class="mt-10">
-          <h3 class="text-2xl font-bold mb-6">Get in Touch With Us</h3>
+          <h3 class="heading-three mb-8">Get in Touch With Us</h3>
 
           <form @submit.prevent="submitForm" class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -211,14 +237,14 @@ const submitForm = () => {
                 v-model="form.name"
                 type="text"
                 placeholder="Your Name*"
-                class="border rounded-lg px-4 py-3 outline-none focus:border-[#7557ff]"
+                class="border rounded-lg p-6 outline-none focus:border-purple border-[#1B1F2E26] text-text"
               />
 
               <input
                 v-model="form.email"
                 type="email"
                 placeholder="Your Email Address"
-                class="border rounded-lg px-4 py-3 outline-none focus:border-[#7557ff]"
+                class="border rounded-lg p-6 outline-none focus:border-purple border-[#1B1F2E26] text-text"
               />
             </div>
 
@@ -227,12 +253,12 @@ const submitForm = () => {
                 v-model="form.phone"
                 type="text"
                 placeholder="Phone Number"
-                class="border rounded-lg px-4 py-3 outline-none focus:border-[#7557ff]"
+                class="border rounded-lg p-6 outline-none focus:border-purple border-[#1B1F2E26] text-text"
               />
 
               <select
                 v-model="form.service"
-                class="border rounded-lg px-4 py-3 outline-none focus:border-[#7557ff]"
+                class="border rounded-lg p-6 outline-none focus:border-purple border-[#1B1F2E26] text-text"
               >
                 <option value="">Select Service</option>
 
@@ -250,11 +276,11 @@ const submitForm = () => {
               v-model="form.message"
               rows="5"
               placeholder="How can we help you?"
-              class="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#7557ff]"
+              class="w-full border rounded-lg p-6 outline-none focus:border-purple border-[#1B1F2E26] text-text"
             />
 
             <button
-              class="w-full py-3 rounded-lg text-white bg-gradient-to-r from-[#7557ff] to-[#48e5c2]"
+              class="w-full py-3 rounded-lg bg-secondary text-base font-medium text-primary"
             >
               Send Message
             </button>

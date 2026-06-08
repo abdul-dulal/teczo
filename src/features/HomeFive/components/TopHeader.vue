@@ -44,7 +44,7 @@ const options = [
           </div>
         </div>
       </div>
-      <div className="flex w-[100px] gap-3 items-center ml-4 xl:pr-0 pr-5">
+      <div class="flex w-[100px] gap-3 items-center ml-4 xl:pr-0 pr-5">
         <a
           href="https://www.facebook.com/"
           target="_blank"
