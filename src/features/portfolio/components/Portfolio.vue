@@ -2,13 +2,17 @@
 import { portfolioData } from "@/demoData";
 import shape from "@/assets/img/portfolio/shape.png";
 import { ArrowUpRight } from "lucide-vue-next";
+defineProps({
+  showgap: { type: Boolean, default: true },
+  sliceNumber: { type: Number, default: 3 },
+});
 </script>
 <template>
-  <section class="section-base">
+  <section :class="showgap ? 'section-base' : ''">
     <div class="container">
       <div class="grid grid-cols-3 gap-[30px]">
         <div
-          v-for="(item, index) in portfolioData"
+          v-for="(item, index) in portfolioData.slice(0, sliceNumber)"
           :key="index"
           class="relative h-full w-full overflow-hidden"
         >

@@ -8,7 +8,7 @@ import Portfolio from "../components/Portfolio.vue";
 <template>
   <div>
     <BreadCumb title="Our Portfolio" />
-    <Portfolio />
+    <Portfolio :sliceNumber="6" />
     <Feature :img="featureImg" />
     <FooterTwo />
   </div>
