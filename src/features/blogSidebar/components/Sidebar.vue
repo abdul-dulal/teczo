@@ -1,40 +1,50 @@
 <script setup>
+import { ChevronRight, Clock4, UserPen } from "lucide-vue-next";
+import lp01 from "@/assets/img/blog/lp01.png";
+import lp02 from "@/assets/img/blog/lp02.png";
+import lp03 from "@/assets/img/blog/lp03.png";
+import icon01 from "@/assets/img/blog/user.svg";
+import icon02 from "@/assets/img/blog/dev.svg";
+import icon03 from "@/assets/img/blog/app.svg";
+import icon04 from "@/assets/img/blog/seo.svg";
+import icon05 from "@/assets/img/blog/ill.svg";
+
 const posts = [
   {
     id: 1,
     title: "Intuitive Header by Choose a Pre-Built Header",
     date: "April 24, 2024",
-    image: "https://picsum.photos/100?1",
+    image: lp01,
   },
   {
     id: 2,
     title: "Intuitive Header by Choose a Pre-Built Header",
     date: "June 17, 2024",
-    image: "https://picsum.photos/100?2",
+    image: lp02,
   },
   {
     id: 3,
     title: "Intuitive Header by Choose a Pre-Built Header",
     date: "May 12, 2024",
-    image: "https://picsum.photos/100?3",
+    image: lp03,
   },
 ];
 
 const categories = [
-  { name: "Content Management", active: false },
-  { name: "Development", active: true },
-  { name: "Mobile Application", active: false },
-  { name: "SEO Analytics", active: false },
-  { name: "Illustration", active: false },
+  { name: "Content Management", icon: icon01 },
+  { name: "Development", icon: icon02 },
+  { name: "Mobile Application", icon: icon03 },
+  { name: "SEO Analytics", icon: icon04 },
+  { name: "Illustration", icon: icon05 },
 ];
 
 const tags = [
-  { name: "Technology", active: false },
-  { name: "Digital", active: true },
-  { name: "Marketing", active: false },
-  { name: "Solutions", active: false },
-  { name: "Site analytics", active: false },
-  { name: "User", active: false },
+  { name: "Technology" },
+  { name: "Digital" },
+  { name: "Marketing" },
+  { name: "Solutions" },
+  { name: "Site analytics" },
+  { name: "User" },
 ];
 </script>
 <template>
@@ -66,23 +76,28 @@ const tags = [
 
     <!-- Latest Post -->
     <div>
-      <h3 class="font-semibold text-gray-800 mb-4">Latest Post</h3>
+      <h3 class="text-[22px] font-bold leading-7 my-[30px] text-bg">
+        Latest Post
+      </h3>
 
-      <div class="space-y-3">
+      <div class="flex flex-col gap-1.5">
         <div
           v-for="post in posts"
           :key="post.id"
-          class="flex gap-3 rounded-lg bg-white p-3 shadow-sm"
+          class="flex gap-3 shadow-[0px_1px_3px_0px_#03041C1A] p-3 bg-light-gray"
         >
-          <img :src="post.image" class="h-16 w-16 rounded-md object-cover" />
+          <img
+            :src="post.image"
+            class="h-[90px] w-[90px] rounded-md object-cover"
+          />
 
           <div>
-            <h4 class="text-xs font-medium text-gray-800 leading-5">
+            <h4 class="text-lg font-bold text-bg leading-5">
               {{ post.title }}
             </h4>
 
-            <p class="mt-2 text-[11px] text-gray-500">
-              {{ post.date }}
+            <p class="flex items-center gap-2 mt-4 text-[14px] text-[#5C6972]">
+              <Clock4 size="12" />{{ post.date }}
             </p>
           </div>
         </div>
@@ -90,44 +105,47 @@ const tags = [
     </div>
 
     <!-- Categories -->
-    <div class="rounded-2xl bg-[#F7F7F9] p-5">
-      <h3 class="mb-4 font-semibold text-gray-800">Categories</h3>
+    <div class="rounded-2xl bg-light-gray p-10">
+      <h3 class="text-[22px] font-bold leading-7 mb-[30px] text-bg">
+        Categories
+      </h3>
 
       <div class="space-y-3">
         <div
           v-for="category in categories"
           :key="category.name"
-          class="flex items-center justify-between rounded-lg bg-white px-4 py-3 shadow-sm cursor-pointer hover:bg-purple-50"
-          :class="
-            category.active
-              ? 'text-purple-600 border-l-2 border-purple-600'
-              : 'text-gray-600'
-          "
+          class="flex items-center gap-3"
         >
-          <span class="text-sm">{{ category.name }}</span>
+          <div
+            class="flex items-center justify-between rounded-lg bg-white px-6 py-[22px] shadow-sm cursor-pointer hover:shadow-lg group w-full"
+          >
+            <div class="flex gap-4 items-center">
+              <component :is="category.icon" class="transition duration-300" />
+              <span
+                class="text-base font-medium leading-0 text-[#5C6972] group-hover:text-purple"
+              >
+                {{ category.name }}</span
+              >
+            </div>
 
-          <span>›</span>
+            <span> <ChevronRight size="16" color="#5C6972" /></span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Tags -->
     <div>
-      <h3 class="mb-4 font-semibold text-gray-800">Tags</h3>
+      <h3 class="text-[22px] font-bold leading-7 mb-[30px] text-bg">Tags</h3>
 
-      <div class="flex flex-wrap gap-2">
-        <span
+      <div class="flex flex-wrap gap-2.5">
+        <button
           v-for="tag in tags"
           :key="tag.name"
-          class="rounded-md px-3 py-1 text-xs"
-          :class="
-            tag.active
-              ? 'bg-purple-600 text-white'
-              : 'bg-gray-100 text-gray-500'
-          "
+          class="rounded-[10px] px-[19px] py-3 text-lg font-medium bg-light-gray text-[#5C6972] hover:bg-purple-600 hover:text-white cursor-pointer transition-all ease-in-out duration-500"
         >
           {{ tag.name }}
-        </span>
+        </button>
       </div>
     </div>
   </aside>
