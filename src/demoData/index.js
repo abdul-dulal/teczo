@@ -20,6 +20,9 @@ import slider05 from "@/assets/img/home/slider-05.png";
 import blog01 from "@/assets/img/home/blog-01.png";
 import blog02 from "@/assets/img/home/blog-02.png";
 import blog03 from "@/assets/img/home/blog-03.png";
+import blog04 from "@/assets/img/home/blog-04.png";
+import blog05 from "@/assets/img/home/blog-05.png";
+import blog06 from "@/assets/img/home/blog-06.png";
 
 import C01 from "@/assets/img/homeTwo/c-01.svg";
 import C02 from "@/assets/img/homeTwo/c-02.svg";
@@ -92,6 +95,11 @@ import portfolio02 from "@/assets/img/portfolio/p02.png";
 import portfolio03 from "@/assets/img/portfolio/p03.png";
 import portfolio04 from "@/assets/img/portfolio/p04.png";
 import portfolio05 from "@/assets/img/portfolio/p05.png";
+
+import sd01 from "@/assets/img/blog/sd-01.png";
+import sd02 from "@/assets/img/blog/sd-02.png";
+import sd03 from "@/assets/img/blog/sd-03.png";
+import sd04 from "@/assets/img/blog/sd-04.png";
 
 export const stats = [
   { title: "Risk management", img: management, number: "20x" },
@@ -184,6 +192,21 @@ export const blogs = [
     img: blog03,
     desc: "Development",
   },
+  {
+    blogTitle: "Our strategic planning ensures your brand's vision aligns",
+    img: blog04,
+    desc: "Development",
+  },
+  {
+    blogTitle: "The complex but awesome CSS border-image proper for",
+    img: blog05,
+    desc: "Development",
+  },
+  {
+    blogTitle: "Our strategic planning ensures your brand's vision aligns",
+    img: blog06,
+    desc: "Development",
+  },
 ];
 
 export const ourClients = [
@@ -227,7 +250,6 @@ export const menu = [
       { name: "Testimonial", path: "/testmonial" },
       { name: "Price Plan", path: "/price-plan" },
       { name: "Our Faq", path: "/faq" },
-      { name: "Home Five", path: "/home-five" },
     ],
   },
   {
@@ -248,7 +270,15 @@ export const menu = [
     ],
   },
 
-  { name: "Blog", path: "/blog" },
+  {
+    name: "Blog",
+
+    children: [
+      { name: "Our Blog", path: "/blog" },
+      { name: "Blog Sidebar", path: "/blog-sidebar" },
+      { name: "Portfolio Details", path: "/portfolio-details" },
+    ],
+  },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -544,5 +574,24 @@ export const portfolioData = [
     img: portfolio01,
     tech: "Technology",
     title: "Cyber Security",
+  },
+];
+
+export const blogData = [
+  {
+    img: sd01,
+    title: "Announcing Attachment Resolution Sentiments.",
+  },
+  {
+    img: sd02,
+    title: "Announcing Attachment Resolution Sentiments.",
+  },
+  {
+    img: sd03,
+    title: "Announcing Attachment Resolution Sentiments.",
+  },
+  {
+    img: sd04,
+    title: "Announcing Attachment Resolution Sentiments.",
   },
 ];

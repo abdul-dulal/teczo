@@ -78,6 +78,16 @@ const routes = [
     component: () =>
       import("@/features/portfolio-details/page/PortfolioDetails.vue"),
   },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("@/features/blog/page/page.vue"),
+  },
+  {
+    path: "/blog-sidebar",
+    name: "Blog Sidebar",
+    component: () => import("@/features/blogSidebar/page/page.vue"),
+  },
 ];
 
 const router = createRouter({
