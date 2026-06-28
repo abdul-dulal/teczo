@@ -88,6 +88,11 @@ const routes = [
     name: "Blog Sidebar",
     component: () => import("@/features/blogSidebar/page/page.vue"),
   },
+  {
+    path: "/blog-details",
+    name: "Blog Details",
+    component: () => import("@/features/blogDetails/page/page.vue"),
+  },
 ];
 
 const router = createRouter({

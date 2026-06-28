@@ -10,7 +10,23 @@ import author from "@/assets/img/blog/author.png";
         <div>
           <div v-for="(item, index) in blogData" :key="index">
             <div>
-              <img class="mb-6" :src="item.img" alt="blog" />
+              <div class="relative">
+                <img class="mb-6 rounded-xl" :src="item.img" alt="blog" />
+                <div
+                  class="flex items-center gap-3 absolute bottom-[30px] right-[30px]"
+                >
+                  <button
+                    class="cursor-pointer py-[9px] px-2.5 text-xs font-bold uppercase bg-secondary text-black rounded"
+                  >
+                    UI Design
+                  </button>
+                  <button
+                    class="cursor-pointer py-[9px] px-2.5 text-xs font-bold uppercase bg-white text-bg rounded"
+                  >
+                    UI Design
+                  </button>
+                </div>
+              </div>
               <div class="flex items-center gap-3.5 mb-6">
                 <button
                   class="px-5 py-2 text-sm font-medium text-[#5C6972] border border-[#1B1F2E1A] rounded-full"

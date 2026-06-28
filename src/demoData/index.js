@@ -276,7 +276,7 @@ export const menu = [
     children: [
       { name: "Our Blog", path: "/blog" },
       { name: "Blog Sidebar", path: "/blog-sidebar" },
-      { name: "Portfolio Details", path: "/portfolio-details" },
+      { name: "Blog Details", path: "/blog-details" },
     ],
   },
   { name: "Contact", path: "/contact" },
