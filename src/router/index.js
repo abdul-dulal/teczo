@@ -93,6 +93,16 @@ const routes = [
     name: "Blog Details",
     component: () => import("@/features/blogDetails/page/page.vue"),
   },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("@/features/contact/page/page.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: import("@/features/NotFound.vue"),
+  },
 ];
 
 const router = createRouter({
