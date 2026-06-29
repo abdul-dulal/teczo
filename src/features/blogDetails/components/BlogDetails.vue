@@ -3,6 +3,10 @@ import feature from "@/assets/img/blog/feature.png";
 import { Check } from "lucide-vue-next";
 import feature01 from "@/assets/img/blog/feature01.png";
 import feature02 from "@/assets/img/blog/feature02.png";
+
+import author01 from "@/assets/img/blog/author02.png";
+import author02 from "@/assets/img/blog/author03.png";
+
 const features = [
   "Say goodbye to bank fees.",
   "Leverage agile frameworks to provide",
@@ -16,6 +20,24 @@ const tags = [
   { name: "Solutions" },
 
   { name: "User" },
+];
+const comments = [
+  {
+    id: 1,
+    name: "Hanvor Vai",
+    date: "July 14, 2022",
+    image: author01,
+    message:
+      "One's of the best template out there, design, code quality, updates etc everything you need guys, but if you won't regret it!",
+  },
+  {
+    id: 2,
+    name: "Alexander Ljung",
+    date: "July 16, 2022",
+    image: author02,
+    message:
+      "This time the user is awesome! But I had one small issue with link option in a particular portfolio. The other day.",
+  },
 ];
 </script>
 <template>
@@ -122,6 +144,100 @@ const tags = [
           </button>
         </div>
       </div>
+    </div>
+
+    <div>
+      <h2 class="text-[34px] font-bold text-black leading-6 my-[30px]">
+        Comments (2)
+      </h2>
+
+      <!-- Comment Item -->
+      <div
+        v-for="comment in comments"
+        :key="comment.id"
+        class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6"
+      >
+        <div class="flex gap-4">
+          <img
+            :src="comment.image"
+            :alt="comment.name"
+            class="w-20 h-20 rounded-full object-cover"
+          />
+
+          <div class="flex-1">
+            <p class="text-[13px] font-medium text-[#5C6972] mb-1">
+              {{ comment.date }}
+            </p>
+
+            <h4 class="font-bold text-bg text-xl">
+              {{ comment.name }}
+            </h4>
+
+            <p class="text-[#5C6972] text-base mt-2 leading-6">
+              {{ comment.message }}
+            </p>
+
+            <button
+              class="mt-4 px-[18px] py-2 text-sm font-bold bg-purple text-white rounded-[10px] hover:bg-violet-700 transition"
+            >
+              Reply
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reply Form -->
+    <div class="mt-14">
+      <h2 class="text-[34px] font-bold text-black leading-6 mb-[30px]">
+        Leave Your Reply
+      </h2>
+
+      <form class="space-y-5">
+        <div class="grid md:grid-cols-2 gap-5">
+          <input
+            type="text"
+            placeholder="Your name*"
+            class="h-[60px] px-5 border border-gray-200 rounded-base focus[#838694]-none focus:ring-1 focus:ring-purple focus:outline-none rounded-[10px] text-text"
+          />
+
+          <input
+            type="email"
+            placeholder="Your email address*"
+            class="h-[60px] px-5 border border-gray-200 rounded-base focus[#838694]-none focus:ring-1 focus:ring-purple focus:outline-none rounded-[10px] text-text"
+          />
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <input
+            type="text"
+            placeholder="Phone number"
+            class="h-[60px] px-5 border border-gray-200 rounded-base focus[#838694]-none focus:ring-1 focus:ring-purple focus:outline-none rounded-[10px] text-text"
+          />
+
+          <select
+            class="h-[60px] px-5 border border-gray-200 rounded-base focus[#838694]-none focus:ring-1 focus:ring-purple focus:outline-none rounded-[10px] text-text"
+          >
+            <option>Select service</option>
+            <option>Web Development</option>
+            <option>UI/UX Design</option>
+            <option>SEO</option>
+          </select>
+        </div>
+
+        <textarea
+          rows="6"
+          placeholder="How can we help you? Feel free to get in touch!"
+          class="w-full p-5 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple text-text"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full bg-secondary text-bg text-base font-medium px-16 py-6 rounded-[10px] transition"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
 </template>
