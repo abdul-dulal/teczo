@@ -68,7 +68,7 @@ const isSearchOpen = ref(false);
       <div
         class="xl:w-[379px] sm:w-[280px] w-[190px] h-[90px] bg-secondary rounded-tl-[45px] z-999"
       >
-        <div class="flex items-center w-full">
+        <div class="flex items-center w-full overflow-hidden">
           <div
             class="flex items-center sm:gap-10 gap-4 bg-secondary rounded-tl-[45px] xl:w-[290px] sm:w-[280px] w-[190px] h-[90px] sm:pl-10 pl-5"
           >

@@ -25,7 +25,7 @@ const closeModal = () => {
         <div
           class="relative ml-0 md:w-[calc(100vw-10px)] md:mr-10 overflow-visible"
         >
-          <div class="flex md:flex-row flex-col gap-[8%]">
+          <div class="flex lg:flex-row flex-col lg:gap-[8%] gap-10">
             <div class="max-w-[530px] text-white">
               <h6 class="heading-six text-secondary">Tech Management</h6>
 
@@ -99,7 +99,7 @@ const closeModal = () => {
                   </button>
                 </div>
 
-                <h6 class="text-white heading-six max-w-32">
+                <h6 class="text-white heading-six max-w-32 lg:px-0 px-4">
                   Professional IT technology services you can trust
                 </h6>
               </div>
@@ -124,7 +124,7 @@ const closeModal = () => {
       :style="{ backgroundImage: `url(${tips})` }"
     >
       <h2
-        class="max-w-[860px] block m-auto text-center lg:text-[70px] md:text-[55px] text-[45px] lg:leading-[75px] md:leading-[55px] leading-11 sm:px-0 px-1.5 font-bold text-white"
+        class="max-w-[860px] block m-auto text-center lg:text-[70px] md:text-[55px] text-[45px] lg:leading-[75px] md:leading-[55px] leading-11 lg:px-0 px-5 font-bold text-white"
       >
         Best technology solution in your fingertips
       </h2>

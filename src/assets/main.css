@@ -23,11 +23,11 @@ body {
 
 @layer components {
   .heading-one {
-    @apply xl:text-[50px] md:text-[42px] text-[32px] xl:leading-[55px] md:leading-11 leading-9 font-bold tracking-[-0.03em]  capitalize text-primary sm:mb-8 mb-6;
+    @apply xl:text-[50px] md:text-[42px] text-[30px] xl:leading-[55px] md:leading-11 leading-9 font-bold tracking-[-0.03em]  capitalize text-primary sm:mb-8 mb-6;
   }
 
   .heading-three {
-    @apply text-4xl font-bold leading-11;
+    @apply md:text-4xl text-2xl font-bold md:leading-11 leading-8;
   }
 
   .heading-four {
@@ -38,7 +38,7 @@ body {
   }
 
   .heading-six {
-    @apply text-lg font-medium sm:mb-5 mb-4;
+    @apply sm:text-lg text-base font-medium sm:mb-5 mb-4;
   }
 
   .paragraph {

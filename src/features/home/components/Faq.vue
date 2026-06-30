@@ -25,7 +25,7 @@ const handleSubmit = () => {
 <template>
   <div class="section-base">
     <div class="container">
-      <div class="grid grid-cols-2 gap-20">
+      <div class="grid md:grid-cols-2 gap-20">
         <div class="">
           <div class="mb-6">
             <h6 class="text-purple heading-six mb-[30px]">
@@ -44,14 +44,14 @@ const handleSubmit = () => {
             >
               <button
                 @click="toggle(index)"
-                class="w-full flex items-center justify-between px-[30px] py-6 rounded-full transition-all duration-500 cursor-pointer"
+                class="w-full flex items-center justify-between md:px-[30px] px-4 md:py-6 py-4 rounded-full transition-all duration-500 cursor-pointer"
                 :class="
                   activeIndex === index
                     ? 'bg-gray-900 text-white'
                     : 'bg-light-gray text-gray-900'
                 "
               >
-                <span class="heading-six text-left">
+                <span class="heading-six mb-0 text-left">
                   {{ item.question }}
                 </span>
 
@@ -74,7 +74,7 @@ const handleSubmit = () => {
               <transition name="faq">
                 <div
                   v-if="activeIndex === index"
-                  class="paragraph px-[30px] bg-light-gray pt-14 pb-5 rounded-bl-[30px] rounded-br-[30px] -mt-10 relative -z-99"
+                  class="paragraph md:px-[30px] px-5 bg-light-gray pt-14 pb-5 rounded-bl-[30px] rounded-br-[30px] -mt-10 relative -z-99"
                 >
                   {{ item.answer }}
                 </div>
@@ -84,7 +84,7 @@ const handleSubmit = () => {
         </div>
         <div class="border-t-8 border-primary rounded-[20px]">
           <div class="bg-secondary rounded-[20px] -mt-1">
-            <div class="w-full rounded-2xl p-[60px]">
+            <div class="w-full rounded-2xl md:p-[60px] p-6">
               <h6 class="mb-6 heading-six text-purple">Contact Us</h6>
               <h2 class="heading-one mb-7">Let’s Contact With Us</h2>
 

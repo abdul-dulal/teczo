@@ -13,8 +13,12 @@ defineProps({
         <h6 class="heading-six text-purple mb-5">Our latest post</h6>
         <h2 class="heading-one mb-7">Read & gather knowledge from our news</h2>
       </div>
-      <div class="grid grid-cols-3 gap-[30px]">
-        <div v-for="(blog, index) in blogs" :key="index" class="relative">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-[30px] gap-6">
+        <div
+          v-for="(blog, index) in blogs.slice(0, sliceNumber)"
+          :key="index"
+          class="relative"
+        >
           <img
             class="w-full rounded-[30px]"
             :src="blog.img"

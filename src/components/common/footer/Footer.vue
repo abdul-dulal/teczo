@@ -7,14 +7,15 @@ import SocialIcon from "@/features/HomeFive/components/SocialIcon.vue";
 </script>
 
 <template>
-  <div class="flex mt-[120px] items-center justify-end">
+  <div class="flex flex-wrap mt-[120px] items-center justify-end">
     <button
-      class="px-[102px] py-[34px] bg-purple paragraph text-white cursor-pointer"
+      class="xl:px-[102px] px-10 py-[34px] bg-purple paragraph text-white cursor-pointer"
     >
       Saturday - Thursday : 8:30 am - 10:30 pm
     </button>
+
     <button
-      class="px-[60px] w-[746px] cursor-pointer flex justify-between py-[34px] bg-bg paragraph text-white"
+      class="xl:px-[60px] px-10 xl:w-[746px] w-[395px] cursor-pointer flex justify-between py-[34px] bg-bg paragraph text-white"
     >
       Call for Appoinment <arrow-right />
     </button>
@@ -27,7 +28,9 @@ import SocialIcon from "@/features/HomeFive/components/SocialIcon.vue";
       <img :src="wave" alt="Wave" />
     </div>
     <div class="container">
-      <div class="grid grid-cols-4 gap-[140px] items-start justify-between">
+      <div
+        class="grid lg:grid-cols-4 sm:grid-cols-2 xl:gap-[140px] gap-10 items-start justify-between"
+      >
         <div class="space-y-7">
           <img :src="logo" alt="Logo" />
           <p class="paragraph text-white/75 max-w-[273px]">
@@ -38,7 +41,7 @@ import SocialIcon from "@/features/HomeFive/components/SocialIcon.vue";
         </div>
         <div class="space-y-4">
           <h4 class="heading-four text-white">Explore</h4>
-          <ul class="paragraph text-white font-medium space-y-3">
+          <ul class="paragraph text-white font-medium space-y-3 lg:ml-0 ml-5">
             <li class="list-disc">
               <router-link to="/about">About Us</router-link>
             </li>
@@ -58,7 +61,7 @@ import SocialIcon from "@/features/HomeFive/components/SocialIcon.vue";
         </div>
         <div class="space-y-4">
           <h4 class="heading-four text-white">Service link</h4>
-          <ul class="paragraph text-white font-medium space-y-3">
+          <ul class="paragraph text-white font-medium space-y-3 lg:ml-0 ml-5">
             <li class="list-disc">
               <router-link to="/about">Data visualization </router-link>
             </li>
