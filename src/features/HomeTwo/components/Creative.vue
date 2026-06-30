@@ -16,7 +16,7 @@ const closeModal = () => {
 </script>
 <template>
   <div
-    class="h-[610px] w-full bg-cover relative"
+    class="lg:h-[610px] h-[400px] w-full bg-cover relative"
     :style="{
       backgroundImage: `
       linear-gradient(180deg, rgba(27,31,46,0.3) 0%, #1B1F2E 100%),
@@ -24,11 +24,13 @@ const closeModal = () => {
     `,
     }"
   >
-    <div class="absolute right-0 top-[10%]">
+    <div class="absolute lg:block hidden right-0 top-[10%]">
       <img :src="shape" alt="Shape" />
     </div>
-    <div class="absolute -bottom-16 right-0">
-      <h2 class="text-[150px] text-white/20 font-bold tracking-[-10px]">
+    <div class="absolute sm:-bottom-16 -bottom-5 right-0">
+      <h2
+        class="md:text-[150px] sm:text-[120px] text-[90px] text-white/20 font-bold tracking-[-10px]"
+      >
         Solutions
       </h2>
     </div>

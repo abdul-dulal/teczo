@@ -66,7 +66,6 @@ const toggleMenu = (item) => {
   }
 };
 
-
 const socials = [
   {
     link: "https://www.facebook.com/",
@@ -113,8 +112,7 @@ const socials = [
             class="flex justify-between items-center border-b border-white/10 pb-5 mb-[35px]"
           >
             <RouterLink to="/">
-             
-              <img :src="logo" alt="Logo" class=" cursor-pointer" />
+              <img :src="logo" alt="Logo" class="cursor-pointer" />
             </RouterLink>
 
             <button class="text-3xl" @click="toggleDrawer">×</button>

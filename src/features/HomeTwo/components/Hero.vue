@@ -59,7 +59,7 @@ const route = useRoute();
       :loop="true"
       :effect="'fade'"
       :pagination="{ clickable: true }"
-      class="h-[900px]"
+      class="lg:h-[900px] h-[700px]"
     >
       <SwiperSlide v-for="(slide, i) in slides" :key="i">
         <div
@@ -77,7 +77,9 @@ const route = useRoute();
               {{ slide.subtitle }}
             </p>
 
-            <h1 class="text-[70px] leading-[74px] font-bold max-w-[700px]">
+            <h1
+              class="lg:text-[70px] md:text-[50px] sm:text-5xl text-3xl lg:leading-[74px] md:leading-[50px] leading-10 font-bold max-w-[700px]"
+            >
               {{ slide.title }}
             </h1>
 
@@ -104,17 +106,19 @@ const route = useRoute();
           </div>
           <div class="w-full">
             <div class="flex-1">
-              <div class="relative h-10 w-[70%] bg-purple rounded-tr-[20px]">
+              <div
+                class="relative h-10 lg:w-[70%] w-[90%] bg-purple rounded-tr-[20px]"
+              >
                 <div
                   class="absolute -left-5 top-0 h-10 w-10 bg-white skew-50 rotate-40"
                 ></div>
                 <div
                   class="h-full flex justify-between items-center pl-12 pr-[30px]"
                 >
-                  <p class="text-sm font-medium text-white/60">
+                  <p class="text-sm font-medium text-white/60 md:block hidden">
                     <span class="text-white">Address:</span> Broklen StreT, USA
                   </p>
-                  <p class="text-sm font-medium text-white/60">
+                  <p class="text-sm font-medium text-white/60 sm:block hidden">
                     <span class="text-white">Phone:</span> +999 2456 4895
                   </p>
                   <div class="flex items-center gap-4">
@@ -169,7 +173,9 @@ const route = useRoute();
               class="flex items-center justify-between h-[90px] w-full bg-white pl-12 pr-[30px] rounded-r-full -ml-1"
             >
               <!-- MOBILE DRAWER -->
-              <Drawer iconColor="black" />
+              <div class="lg:hidden block">
+                <Drawer iconColor="black" />
+              </div>
 
               <!-- NAV -->
               <nav
@@ -223,17 +229,17 @@ const route = useRoute();
       </div>
     </div>
     <SearchPopup v-model:searchPopup="isSearchOpen" />
-    <div>
+    <div class="xl:block hidden">
       <img
         :src="shape01"
         alt="Shape"
         class="absolute right-0 top-0 z-99 mix-blend-difference"
       />
     </div>
-    <div class="absolute -right-2 top-[20%] z-99">
+    <div class="absolute -right-2 top-[20%] z-99 xl:block hidden">
       <img :src="shape02" alt="Shape" />
     </div>
-    <div class="absolute -right-3 top-[27%] z-99">
+    <div class="absolute -right-3 top-[27%] z-99 xl:block hidden">
       <img :src="shape03" alt="Shape" />
     </div>
   </section>

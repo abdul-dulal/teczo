@@ -20,11 +20,11 @@ const closeModal = () => {
 <template>
   <div class="bg-light-purple section-base">
     <div class="max-w-[1180px] block mx-auto px-5">
-      <div class="grid grid-cols-[40%_50%] gap-28">
+      <div class="grid lg:grid-cols-[40%_50%] lg:gap-28 gap-10">
         <div class="relative">
-          <img :src="women" alt="Women" />
+          <img :src="women" class="w-full" alt="Women" />
           <div
-            class="absolute bottom-[22%] -left-[14%] bg-white rounded-[10px] shadow"
+            class="absolute bottom-[22%] lg:-left-[14%] left-0 bg-white rounded-[10px] shadow"
           >
             <div
               class="w-40 h-[124px] flex items-center justify-center"

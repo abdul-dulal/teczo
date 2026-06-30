@@ -55,12 +55,12 @@ defineProps({
           Suitable pricing plans for all customers & owners
         </h2>
       </div>
-      <div class="grid grid-cols-3 gap-[30px]">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
         <div
           v-for="(plan, i) in plans"
           :key="i"
           :class="[
-            'rounded-2xl p-10 border transition-all duration-300',
+            'rounded-2xl md:p-10 p-5 border transition-all duration-300',
             plan.active
               ? 'bg-primary text-white shadow-xl '
               : 'bg-white text-black border-gray-200',

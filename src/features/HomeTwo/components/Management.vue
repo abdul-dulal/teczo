@@ -6,8 +6,10 @@ import bigImg from "@/assets/img/homeTwo/bigImg.png";
 <template>
   <div class="pt-24 mb-[120px]">
     <div class="bg-purple section-base relative">
-      <div class="absolute -top-[10%] right-0">
-        <img :src="bigImg" alt="Big Image" />
+      <div
+        class="absolute -top-[10%] right-0 2xl:w-[945px] xl:w-[54%] w-[45%] lg:block hidden"
+      >
+        <img :src="bigImg" class="" alt="Big Image" />
       </div>
       <div class="container">
         <div class="max-w-[517px]">
@@ -66,5 +68,4 @@ import bigImg from "@/assets/img/homeTwo/bigImg.png";
       </div>
     </div>
   </div>
- 
 </template>

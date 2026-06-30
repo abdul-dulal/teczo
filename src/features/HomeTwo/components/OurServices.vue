@@ -23,7 +23,7 @@ defineProps({
         </h2>
       </div>
 
-      <div class="px-7 grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+      <div class="px-7 grid sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
         <div
           v-for="(service, index) in ourClients"
           :key="index"

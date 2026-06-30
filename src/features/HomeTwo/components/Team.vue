@@ -15,7 +15,7 @@ defineProps({
         <h6 class="heading-six text-purple">Our Team Members</h6>
         <h2 class="heading-one mt-5">Meet with our iT Experets</h2>
       </div>
-      <div class="grid grid-cols-3 gap-[30px] mt-7">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px] mt-7">
         <div
           v-for="(item, index) in teamMembers.slice(0, sliceNumber)"
           :key="index"

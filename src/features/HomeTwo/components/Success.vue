@@ -23,8 +23,8 @@ onMounted(() => {
       <h2 class="heading-one max-w-[644px] mb-10">
         Preparing for your success, we provide truly prominent IT Solutions
       </h2>
-      <div class="grid grid-cols-[54%_40%] gap-[6%]">
-        <div class="flex items-center gap-10">
+      <div class="grid lg:grid-cols-[54%_40%] gap-[6%]">
+        <div class="flex sm:flex-row flex-col items-center gap-10">
           <div>
             <div
               class="w-[308px] h-[280px] bg-purple rounded-[20px] flex items-center justify-center"
