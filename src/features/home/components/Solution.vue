@@ -6,6 +6,8 @@ import { Check } from "@lucide/vue";
 import tips from "@/assets/img/home/tips.png";
 import Button from "@/components/base/Button.vue";
 import VideoModal from "./VideoModal.vue";
+import { gsap } from "@/plugins/gsap";
+import { useGsapScope } from "@/composables/useGsapScope";
 
 let showModal = ref(false);
 
@@ -16,17 +18,56 @@ const openModal = () => {
 const closeModal = () => {
   showModal.value = false;
 };
+
+const root = useGsapScope((el) => {
+  gsap.from(el.querySelectorAll(".solution-text > *"), {
+    opacity: 0,
+    y: 24,
+    duration: 0.7,
+    stagger: 0.1,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".solution-text"), start: "top 75%" },
+  });
+
+  gsap.from(el.querySelector(".solution-media"), {
+    opacity: 0,
+    scale: 0.95,
+    duration: 0.8,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".solution-media"), start: "top 80%" },
+  });
+
+  gsap.to(el.querySelector(".tips-bg"), {
+    backgroundPosition: "50% 20%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: el.querySelector(".tips-bg"),
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap.from(el.querySelectorAll(".tips-bg > *"), {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".tips-bg"), start: "top 75%" },
+  });
+});
 </script>
 
 <template>
-  <div>
+  <div ref="root">
     <div class="bg-bg section-base w-full overflow-hidden">
       <div class="container">
         <div
           class="relative ml-0 md:w-[calc(100vw-10px)] md:mr-10 overflow-visible"
         >
           <div class="flex lg:flex-row flex-col lg:gap-[8%] gap-10">
-            <div class="max-w-[530px] text-white">
+            <div class="solution-text max-w-[530px] text-white">
               <h6 class="heading-six text-secondary">Tech Management</h6>
 
               <h2 class="heading-one text-white">
@@ -83,7 +124,7 @@ const closeModal = () => {
             </div>
 
             <div
-              class="relative flex items-stretch md:h-[520px] h-[400px] md:mt-0 mt-8"
+              class="solution-media relative flex items-stretch md:h-[520px] h-[400px] md:mt-0 mt-8"
             >
               <!-- Left Section -->
               <div
@@ -120,7 +161,7 @@ const closeModal = () => {
       </div>
     </div>
     <div
-      class="w-full bg-cover bg-center bg-no-repeat section-base"
+      class="tips-bg w-full bg-cover bg-center bg-no-repeat section-base"
       :style="{ backgroundImage: `url(${tips})` }"
     >
       <h2

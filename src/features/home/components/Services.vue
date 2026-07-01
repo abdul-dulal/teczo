@@ -2,19 +2,42 @@
 import Button from "@/components/base/Button.vue";
 import { services } from "@/demoData";
 import { ArrowUpRight } from "lucide-vue-next";
+import { gsap } from "@/plugins/gsap";
+import { useGsapScope } from "@/composables/useGsapScope";
+
+const root = useGsapScope((el) => {
+  gsap.from(el.querySelectorAll(".services-heading > *"), {
+    opacity: 0,
+    y: 24,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".services-heading"), start: "top 80%" },
+  });
+
+  gsap.from(el.querySelectorAll(".service-card"), {
+    opacity: 0,
+    y: 50,
+    scale: 0.95,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".service-grid"), start: "top 80%" },
+  });
+});
 </script>
 
 <template>
-  <div class="section-base bg-[#F7F7F9]">
+  <div ref="root" class="section-base bg-[#F7F7F9]">
     <div class="max-w-[1790px] mx-auto px-5">
-      <div class="max-w-[651px] mx-auto">
+      <div class="services-heading max-w-[651px] mx-auto">
         <h6 class="heading-six text-center">Our service</h6>
         <h2 class="heading-one text-center sm:my-[30px] my-6">
           Service we are always try to provide our customers
         </h2>
       </div>
-      <div class="grid xl:grid-cols-4 sm:grid-cols-2 gap-[30px]">
-        <div v-for="(service, index) in services" :key="index">
+      <div class="service-grid grid xl:grid-cols-4 sm:grid-cols-2 gap-[30px]">
+        <div v-for="(service, index) in services" :key="index" class="service-card">
           <div class="p-5 bg-white rounded-[20px]">
             <img :src="service.img" :alt="service.serviceName" />
             <h4

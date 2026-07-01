@@ -1,19 +1,51 @@
 <script setup>
 import start from "@/assets/img/home/purple-start.png";
 import { experts } from "@/demoData";
+import { gsap } from "@/plugins/gsap";
+import { useGsapScope } from "@/composables/useGsapScope";
+
+const root = useGsapScope((el) => {
+  gsap.from(el.querySelectorAll(".award-heading > *"), {
+    opacity: 0,
+    y: 24,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".award-heading"), start: "top 80%" },
+  });
+
+  gsap.from(el.querySelectorAll(".award-item"), {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: 0.12,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".award-list"), start: "top 80%" },
+  });
+
+  gsap.from(el.querySelectorAll(".expert-card"), {
+    opacity: 0,
+    y: 40,
+    scale: 0.95,
+    duration: 0.7,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".expert-grid"), start: "top 80%" },
+  });
+});
 </script>
 
 <template>
-  <div class="section-base">
+  <div ref="root" class="section-base">
     <div class="container">
       <div class="grid md:grid-cols-2">
-        <div class="max-w-[361px]">
+        <div class="award-heading max-w-[361px]">
           <h6 class="heading-six text-purple">Team and awards</h6>
           <h2 class="heading-one">Our awards and tech experts</h2>
         </div>
         <div>
-          <div class="grid grid-cols-2 space-y-5">
-            <div class="flex flex-wrap md:gap-[25px] gap-4">
+          <div class="award-list grid grid-cols-2 space-y-5">
+            <div class="award-item flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -24,7 +56,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex flex-wrap md:gap-[25px] gap-4">
+            <div class="award-item flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -35,7 +67,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex flex-wrap md:gap-[25px] gap-4">
+            <div class="award-item flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -46,7 +78,7 @@ import { experts } from "@/demoData";
                 <li class="paragraph list-inside">January, 2025</li>
               </div>
             </div>
-            <div class="flex flex-wrap md:gap-[25px] gap-4">
+            <div class="award-item flex flex-wrap md:gap-[25px] gap-4">
               <div>
                 <img :src="start" alt="Star" />
               </div>
@@ -61,9 +93,9 @@ import { experts } from "@/demoData";
         </div>
       </div>
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] lg:mt-[60px] mt-10"
+        class="expert-grid grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] lg:mt-[60px] mt-10"
       >
-        <div v-for="(item, index) in experts" :key="index">
+        <div v-for="(item, index) in experts" :key="index" class="expert-card">
           <div>
             <div class="relative rounded-2xl overflow-hidden group">
               <img

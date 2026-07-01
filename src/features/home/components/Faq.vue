@@ -3,6 +3,36 @@ import InputField from "@/components/common/InputField.vue";
 import { faqs } from "@/demoData";
 import { ref } from "vue";
 import { reactive } from "vue";
+import { gsap } from "@/plugins/gsap";
+import { useGsapScope } from "@/composables/useGsapScope";
+
+const root = useGsapScope((el) => {
+  gsap.from(el.querySelectorAll(".faq-heading > *"), {
+    opacity: 0,
+    y: 24,
+    duration: 0.7,
+    stagger: 0.12,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".faq-heading"), start: "top 80%" },
+  });
+
+  gsap.from(el.querySelectorAll(".faq-item"), {
+    opacity: 0,
+    y: 24,
+    duration: 0.6,
+    stagger: 0.1,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".faq-list"), start: "top 80%" },
+  });
+
+  gsap.from(el.querySelector(".faq-contact"), {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el.querySelector(".faq-contact"), start: "top 80%" },
+  });
+});
 
 const activeIndex = ref(2); // default open like image
 
@@ -23,11 +53,11 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div class="section-base">
+  <div ref="root" class="section-base">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-20">
         <div class="">
-          <div class="mb-6">
+          <div class="faq-heading mb-6">
             <h6 class="text-purple heading-six mb-[30px]">
               Our Question And Answer
             </h6>
@@ -36,11 +66,11 @@ const handleSubmit = () => {
             </h2>
           </div>
 
-          <div class="space-y-5">
+          <div class="faq-list space-y-5">
             <div
               v-for="(item, index) in faqs"
               :key="index"
-              class="rounded-2xl transition-all duration-500 cursor-pointer z-999"
+              class="faq-item rounded-2xl transition-all duration-500 cursor-pointer z-999"
             >
               <button
                 @click="toggle(index)"
@@ -82,7 +112,7 @@ const handleSubmit = () => {
             </div>
           </div>
         </div>
-        <div class="border-t-8 border-primary rounded-[20px]">
+        <div class="faq-contact border-t-8 border-primary rounded-[20px]">
           <div class="bg-secondary rounded-[20px] -mt-1">
             <div class="w-full rounded-2xl md:p-[60px] p-6">
               <h6 class="mb-6 heading-six text-purple">Contact Us</h6>

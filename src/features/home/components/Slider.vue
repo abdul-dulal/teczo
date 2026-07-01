@@ -5,6 +5,28 @@ import "swiper/css";
 import { testimonials } from "@/demoData";
 import shape from "@/assets/img/home/slider-shape.png";
 import { ArrowLeft, ArrowRight } from "@lucide/vue";
+import { gsap } from "@/plugins/gsap";
+import { useGsapScope } from "@/composables/useGsapScope";
+
+const root = useGsapScope((el) => {
+  gsap.from(el.querySelectorAll(".avatar-row img"), {
+    opacity: 0,
+    y: 20,
+    scale: 0.8,
+    duration: 0.6,
+    stagger: 0.08,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el, start: "top 75%" },
+  });
+
+  gsap.from(el.querySelector(".testimonial-wrap"), {
+    opacity: 0,
+    y: 30,
+    duration: 0.7,
+    ease: "power3.out",
+    scrollTrigger: { trigger: el, start: "top 70%" },
+  });
+});
 
 const swiperRef = ref(null);
 const activeIndex = ref(0);
@@ -40,8 +62,8 @@ const goToSlide = (index) => {
 </script>
 
 <template>
-  <div class="py-[140px] text-center relative overflow-hidden">
-    <div class="flex justify-center items-center gap-3 mb-12">
+  <div ref="root" class="py-[140px] text-center relative overflow-hidden">
+    <div class="avatar-row flex justify-center items-center gap-3 mb-12">
       <img
         v-for="(item, index) in testimonials"
         :key="index"
@@ -56,7 +78,7 @@ const goToSlide = (index) => {
       />
     </div>
 
-    <div class="relative max-w-[1100px] mx-auto px-12">
+    <div class="testimonial-wrap relative max-w-[1100px] mx-auto px-12">
       <Swiper
         @swiper="(swiper) => (swiperRef = swiper)"
         :initial-slide="activeIndex"
