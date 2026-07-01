@@ -29,8 +29,8 @@ const cards = [
 
 <template>
   <div class="bg-gradient-to-b from-[#E4DAF6] to-white section-base">
-    <div class="max-w-[1295px] mx-auto">
-      <div class="flex items-end justify-between mb-16">
+    <div class="max-w-[1295px] mx-auto px-5">
+      <div class="flex items-center flex-wrap justify-between mb-16">
         <div class="max-w-[550px]">
           <h6 class="heading-six mb-5 text-purple">Agency benefits</h6>
           <h2 class="heading-one text-primary">
@@ -47,7 +47,7 @@ const cards = [
       </div>
     </div>
     <div class="container">
-      <div class="grid grid-cols-4 gap-12">
+      <div class="grid lg:grid-cols-4 gap-12 sm:grid-cols-2">
         <div v-for="(item, i) in cards" :key="i" class="relative">
           <div
             class="absolute inset-0 bg-[#cfcbd9] rounded-2xl rotate-[-8deg] translate-x-0 -translate-y-1"

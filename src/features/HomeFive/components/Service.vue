@@ -13,7 +13,7 @@ import { servicesFive } from "@/demoData";
         We provide our clients best IT services
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-6 relative">
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6 relative">
         <div
           v-for="item in servicesFive"
           :key="item.id"

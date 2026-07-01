@@ -27,9 +27,9 @@ const items = [
       </h2>
 
       <div class="pt-5">
-        <div class="mx-auto flex items-center justify-between relative">
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-8 relative">
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+            class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 xl:block hidden"
           >
             <img :src="wave" class="w-[790px] max-w-none block" alt="Wave" />
           </div>
@@ -37,7 +37,7 @@ const items = [
           <div
             v-for="(item, index) in items"
             :key="index"
-            class="relative z-10 flex flex-col items-center text-center w-1/4"
+            class="relative z-10 flex flex-col items-center text-center"
           >
             <!-- Circle Image -->
             <div class="relative">
@@ -81,7 +81,7 @@ const items = [
             </div>
 
             <!-- Title -->
-            <h3 class="mt-4 font-semibold text-lg">Discussion</h3>
+            <h3 class="sm:mt-4 mt-0 font-semibold text-lg">Discussion</h3>
 
             <!-- Description -->
             <p class="text-sm text-gray-500 mt-2 px-4">

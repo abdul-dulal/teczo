@@ -27,16 +27,22 @@ const closeModal = () => {
     <div class="container">
       <div>
         <h6 class="heading-six text-secondary mb-5">Our Latest Projects</h6>
-        <h2 class="heading-one text-white max-w-[490px] mb-10">
+        <h2 class="heading-one text-white max-w-[490px] mb-10 z-9999 relative">
           Improve and Enhance the Tech Projects
         </h2>
 
         <div class="relative max-w-[870px]">
           <Swiper
             :modules="[Navigation]"
-            :slides-per-view="2"
+            :slides-per-view="1"
             :space-between="10"
             :loop="true"
+            :breakpoints="{
+              640: { slidesPerView: 2 },
+              440: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 2 },
+            }"
             :navigation="{
               nextEl: '.next-btn',
               prevEl: '.prev-btn',
@@ -44,7 +50,7 @@ const closeModal = () => {
             class=""
           >
             <SwiperSlide v-for="(item, i) in projectSlides" :key="i">
-              <div class="rounded-[20px]">
+              <div class="rounded-[20px] w-fit overflow-hidden">
                 <img :src="item.image" class="" />
 
                 <div class="flex justify-center">
@@ -69,7 +75,7 @@ const closeModal = () => {
           </Swiper>
         </div>
       </div>
-      <div class="absolute top-0 right-0">
+      <div class="absolute top-0 right-0 w-[50%]">
         <img
           :src="banner"
           alt="Banner"
@@ -81,7 +87,7 @@ const closeModal = () => {
         >
           <!-- Circle -->
           <div
-            class="relative w-[200px] h-[200px] rounded-full backdrop-blur-md bg-white/10 border border-white/20 flex items-center justify-center"
+            class="relative w-[200px] h-[200px] rounded-full backdrop-blur-md bg-white/10 border border-white/20 xl:flex hidden items-center justify-center"
           >
             <!-- Rotating Text -->
             <div
@@ -104,7 +110,7 @@ const closeModal = () => {
 
           <!-- BUTTON (outside blur container) -->
           <button
-            class="absolute w-[60px] h-[60px] bg-white text-black cursor-pointer z-9999 pointer-events-auto rounded-full flex items-center justify-center shadow-lg"
+            class="absolute w-[60px] h-[60px] bg-white text-black cursor-pointer z-9999 pointer-events-auto rounded-full xl:flex hidden items-center justify-center shadow-lg"
             @click="openModal"
           >
             ▶
@@ -117,20 +123,20 @@ const closeModal = () => {
       </div>
       <VideoModal :showModal="showModal" @closeModal="closeModal" />
       <div class="flex absolute right-0 bottom-0">
-        <div class="flex gap-2.5 z-10 bg-secondary p-10">
+        <div class="flex gap-2.5 z-10 bg-secondary sm:p-10 p-5">
           <button
-            class="prev-btn size-[60px] border border-primary rounded-full flex items-center justify-center cursor-pointer"
+            class="prev-btn sm:size-[60px] size-[50px] border border-primary rounded-full flex items-center justify-center cursor-pointer"
           >
             <ArrowLeft color="black" />
           </button>
           <button
-            class="next-btn size-[60px] bg-black rounded-full flex items-center justify-center cursor-pointer"
+            class="next-btn sm:size-[60px] size-[50px] bg-black rounded-full flex items-center justify-center cursor-pointer"
           >
             <ArrowRight />
           </button>
         </div>
         <button
-          class="bg-purple w-[407px] h-[140px] paragraph font-medium text-white cursor-pointer"
+          class="bg-purple sm:w-[407px] w-[200px] sm:h-[140px] h-[100px] paragraph font-medium text-white cursor-pointer"
         >
           View all Projects
         </button>

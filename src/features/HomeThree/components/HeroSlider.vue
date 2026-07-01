@@ -37,7 +37,7 @@ const slides = [
 </script>
 
 <template>
-  <div class="relative h-[960px] overflow-hidden">
+  <div class="relative 2xl:h-[960px] md:h-[700px] h-[500px] overflow-hidden">
     <Swiper
       ref="swiperRef"
       :direction="'vertical'"
@@ -47,7 +47,7 @@ const slides = [
     >
       <SwiperSlide v-for="(slide, i) in slides" :key="i">
         <div
-          class="relative h-[960px] bg-cover bg-center flex items-center bg-no-repeat"
+          class="relative lg:h-[960px] md:h-[700px] h-[500px] bg-cover bg-center flex items-center bg-no-repeat"
           :style="{ backgroundImage: `url(${slide.image})` }"
         >
           <div class="absolute inset-0 bg-primary/65"></div>
@@ -56,7 +56,9 @@ const slides = [
             class="container relative z-10 text-white flex items-center w-full h-full justify-center"
           >
             <div class="max-w-[792px] text-center">
-              <h1 class="text-[70px] leading-[74px] font-bold">
+              <h1
+                class="lg:text-[70px] md:text-[50px] sm:text-5xl text-3xl lg:leading-[74px] md:leading-[50px] leading-10 font-bold"
+              >
                 {{ slide.title }}
               </h1>
 
@@ -74,13 +76,12 @@ const slides = [
               </div>
             </div>
           </div>
+          <div class="absolute -right-5 top-0 z-99 2xl:block hidden">
+            <img :src="wave" alt="Wave" />
+          </div>
         </div>
       </SwiperSlide>
     </Swiper>
-
-    <div class="absolute -right-5 top-0 z-99">
-      <img :src="wave" alt="Wave" />
-    </div>
 
     <div
       ref="paginationRef"

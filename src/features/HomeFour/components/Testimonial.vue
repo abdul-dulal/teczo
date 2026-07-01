@@ -17,14 +17,14 @@ import logo from "@/assets/img/homeThree/c03.png";
 
 <template>
   <section class="section-base">
-    <div class="max-w-[1158px] block mx-auto">
+    <div class="max-w-[1158px] block mx-auto px-5 overflow-hidden">
       <h6 class="heading-six text-purple text-center">Our Clients Feedback</h6>
       <h2 class="heading-one text-primary text-center">What customer saying</h2>
-      <div class="flex justify-between">
-        <div class="relative max-w-[450px]">
+      <div class="flex justify-between gap-10">
+        <div class="relative max-w-[450px] md:block hidden">
           <img :src="banner" alt="Banner" class="rounded-[20px]" />
           <div
-            class="bg-white rounded-full p-[25px] w-fit shadow-[10px_0px_30px_0px_#201A2E1A] absolute -right-[70px] top-1/2 -translate-y-1/2"
+            class="bg-white rounded-full p-[25px] w-fit shadow-[10px_0px_30px_0px_#201A2E1A] absolute -right-[70px] xl:block hidden top-1/2 -translate-y-1/2"
           >
             <img :src="t01" alt="Testmonial" />
             <img :src="t02" alt="Testimonial" />
@@ -41,6 +41,12 @@ import logo from "@/assets/img/homeThree/c03.png";
                 :navigation="{
                   nextEl: '.next-button',
                   prevEl: '.prev-button',
+                }"
+                :breakpoints="{
+                  320: { slidesPerView: 1 },
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 1 },
+                  1024: { slidesPerView: 1 },
                 }"
                 class="mt-5"
               >
@@ -64,7 +70,9 @@ import logo from "@/assets/img/homeThree/c03.png";
                         <img :src="quote" class="w-full h-full" alt="Quote" />
                       </div>
                       <div>
-                        <p class="paragraph text-text">{{ item.review }}</p>
+                        <p class="paragraph text-text">
+                          {{ item.review }}
+                        </p>
                         <p class="paragraph text-purple mt-[35px]">
                           {{ item.dsgn }}
                         </p>

@@ -31,7 +31,7 @@ import { Autoplay } from "swiper/modules";
           :space-between="25"
           :loop="true"
           :breakpoints="{
-            640: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
             1224: { slidesPerView: 4 },

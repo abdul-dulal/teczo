@@ -36,7 +36,9 @@ const toggle = (index) => {
 
 <template>
   <section class="section-base relative overflow-hidden">
-    <div class="absolute left-0 top-1/2 -translate-y-1/2">
+    <div
+      class="absolute left-0 lg:block hidden top-1/2 -translate-y-1/2 w-[45%]"
+    >
       <img :src="banner" alt="Faq Banner" />
       <div
         class="absolute right-[60px] p-[30px] bottom-[60px] bg-[linear-gradient(239.18deg,rgba(255,255,255,0.08)_17.93%,rgba(255,255,255,0.02)_81.51%)] size-[260px] rounded-[15px] backdrop-blur-2xl"
@@ -54,7 +56,7 @@ const toggle = (index) => {
       </div>
     </div>
     <div class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid lg:grid-cols-2">
         <div></div>
         <div class="">
           <div>
@@ -77,22 +79,24 @@ const toggle = (index) => {
               class="w-full flex items-center justify-between px-7 pt-[17px] pb-6 text-left"
             >
               <h3
-                class="text-xl font-medium leading-8"
+                class="md:text-xl text-lg font-medium md:leading-8 leading-6"
                 :class="activeIndex === index ? 'text-purple' : ''"
               >
                 {{ item.question }}
               </h3>
 
               <!-- Arrow Button -->
-              <div
-                class="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300"
-                :class="
-                  activeIndex === index
-                    ? 'bg-purple-600 text-white rotate-180'
-                    : 'bg-gray-100 text-gray-500'
-                "
-              >
-                <ChevronUp />
+              <div>
+                <div
+                  class="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300"
+                  :class="
+                    activeIndex === index
+                      ? 'bg-purple-600 text-white rotate-180'
+                      : 'bg-gray-100 text-gray-500'
+                  "
+                >
+                  <ChevronUp />
+                </div>
               </div>
             </button>
 

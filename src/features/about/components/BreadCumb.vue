@@ -1,6 +1,6 @@
 <script setup>
 import banner from "@/assets/img/about/breamcumb-banner.png";
-import logo from "@/assets/img/logo/primary-logo.png";
+import logo from "@/assets/img/logo/logo.png";
 import Drawer from "@/components/common/header/Drawer.vue";
 import SearchPopup from "@/components/common/header/SearchPopup.vue";
 import { menu } from "@/demoData";
@@ -26,13 +26,15 @@ defineProps({
   >
     <div class="container">
       <div class="pt-5">
-        <div class="bg-purple rounded-full">
+        <div class="bg-purple sm:rounded-full rounded-2xl">
           <div class="flex">
-            <div class="w-[180px] h-[130px]">
-              <div class="flex h-full items-center justify-center">
-                <router-link to="/">
-                  <img :src="logo" alt="Logo" />
-                </router-link>
+            <div>
+              <div class="sm:w-[235px] w-[180px] h-[130px]">
+                <div class="flex h-full items-center justify-center">
+                  <router-link to="/">
+                    <img :src="logo" alt="Logo" />
+                  </router-link>
+                </div>
               </div>
             </div>
             <div class="w-full">
@@ -73,7 +75,9 @@ defineProps({
                         </div>
                       </div>
                     </div>
-                    <div class="flex w-[100px] gap-3 items-center ml-[25px] xl:pr-0 pr-5">
+                    <div
+                      class="flex w-[100px] gap-3 items-center ml-[25px] xl:pr-0 pr-5"
+                    >
                       <a
                         href="https://www.facebook.com/"
                         target="_blank"
@@ -164,9 +168,9 @@ defineProps({
                 </div>
               </div>
               <div
-                class="flex justify-between items-center h-20 bg-white rounded-full pl-[50px] pr-5 mr-[23px]"
+                class="flex justify-between items-center h-20 sm:bg-white sm:rounded-full rounded-md sm:pl-[50px] pl-1 pr-5 mr-[23px]"
               >
-                <Drawer iconColor="black" />
+                <div class="lg:hidden block"><Drawer iconColor="black" /></div>
                 <nav
                   class="hidden lg:flex items-center justify-between gap-8 text-sm font-medium"
                 >

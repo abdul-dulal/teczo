@@ -7,20 +7,24 @@ import Button from "@/components/base/Button.vue";
 </script>
 <template>
   <section class="max-w-[1700px] mx-auto px-5 pt-[30px]">
-    <div class="grid grid-cols-2 gap-[30px]">
-      <div class="p-[110px] bg-secondary rounded-[20px]">
+    <div class="grid md:grid-cols-2 gap-[30px]">
+      <div class="2xl:p-[110px] sm:p-12 p-10 bg-secondary rounded-[20px]">
         <div class="max-w-[493px] flex-col">
           <div>
-            <h2 class="text-[60px] leading-16 font-bold">
+            <h2
+              class="md:text-[60px] sm:text-[40px] text-[35px] md:leading-16 leading-10 font-bold"
+            >
               Reliable and Secure Managed IT Services.
             </h2>
-            <div class="mt-10 flex gap-4 items-center">
+            <div class="sm:mt-10 mt-5 flex gap-4 items-center">
               <div class="flex items-center">
                 <img :src="author01" alt="Author" />
                 <img :src="author02" class="-ml-2" alt="Author" />
                 <img :src="author03" class="-ml-2" alt="Author" />
               </div>
-              <h2 class="text-[40px] font-bold text-purple">4k</h2>
+              <h2 class="sm:text-[40px] text-[26px] font-bold text-purple">
+                4k
+              </h2>
               <p
                 class="max-w-[77px] paragraph text-primary font-inter leading-[18px]"
               >
@@ -28,7 +32,7 @@ import Button from "@/components/base/Button.vue";
               </p>
             </div>
           </div>
-          <div class="mt-[85px]">
+          <div class="2xl:mt-[85px] sm:mt-10 mt-5">
             <p class="text-lg font-normal leading-[26px]">
               In today's competitive business, the demand for efficient and
               cost-effective IT solutions.

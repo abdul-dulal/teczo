@@ -34,8 +34,8 @@ const testimonials = [
       </h2>
 
       <Swiper
-        :autoplay="{ delay: 3000 }"
         :modules="[Autoplay]"
+        :autoplay="{ delay: 3000 }"
         :slides-per-view="2"
         :space-between="24"
         :loop="true"
@@ -56,7 +56,9 @@ const testimonials = [
               <img :src="vector" alt="Vector" />
             </div>
 
-            <div class="flex items-center gap-[30px] px-10">
+            <div
+              class="flex flex-wrap items-center gap-[30px] pl-10 sm:pr-10 pr-0"
+            >
               <div class="relative">
                 <div class="w-[120px] h-[120px]">
                   <img
@@ -81,7 +83,7 @@ const testimonials = [
                   almost anything in the appearance of your website with only a
                   few clicks. Each demo built
                 </p>
-                <div class="flex items-center gap-[30px]">
+                <div class="flex flex-wrap items-center sm:gap-[30px] gap-3">
                   <h5 class="heading-five text-primary">Richard Vanman</h5>
                   <p class="paragraph text-purple font-inter font-normal">
                     Designer
@@ -93,7 +95,7 @@ const testimonials = [
         </SwiperSlide>
       </Swiper>
 
-      <div class="mt-10 mx-auto w-full text-center">
+      <div class="sm:mt-10 mt-3 mx-auto w-full text-center">
         <button
           class="w-[141px] h-[41px] bg-secondary rounded-full text-base font-bold uppercase"
         >

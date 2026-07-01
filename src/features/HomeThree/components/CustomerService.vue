@@ -12,7 +12,9 @@ import { customerService } from "@/demoData";
         Service we are always try to provide our customers
       </h2>
 
-      <div class="grid grid-cols-3 gap-[30px]">
+      <div
+        class="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-x-[30px] lg:gap-y-0 gap-x-6 sm:gap-y-24 gap-y-28 pt-16"
+      >
         <div
           v-for="(item, index) in customerService"
           :key="index"

@@ -18,7 +18,7 @@ const logos = [
 ];
 </script>
 <template>
-  <div class="pb-[100px]">
+  <div class="pb-20">
     <Swiper
       :modules="[Autoplay]"
       :slides-per-view="5"

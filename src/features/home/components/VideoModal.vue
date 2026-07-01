@@ -14,7 +14,7 @@ const closeModal = () => {
 <template>
   <div
     v-if="showModal"
-    class="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    class="fixed inset-0 bg-black/70 flex items-center justify-center z-9999"
     @click.self="closeModal"
   >
     <div class="bg-black rounded-xl overflow-hidden w-[90%] max-w-3xl relative">

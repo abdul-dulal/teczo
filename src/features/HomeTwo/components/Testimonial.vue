@@ -11,15 +11,19 @@ import { ArrowDown, ArrowUp } from "lucide-vue-next";
 <template>
   <section class="bg-purple py-20 relative">
     <div class="">
-      <div class="flex items-center justify-between">
-        <div class="absolute left-0 top-1/2 -translate-y-1/2">
+      <div class="flex flex-wrap items-center justify-between">
+        <div
+          class="absolute lg:block hidden left-0 top-1/2 -translate-y-1/2 w-[50%]"
+        >
           <img :src="banner" alt="Testimonial Banner" />
         </div>
-        <div></div>
+        <div class="lg:block hidden"></div>
         <div
-          class="max-w-[800px] relative border-l pl-[60px] border-white/15 pr-[130px]"
+          class="2xl:w-[800px] md:w-[600px] w-full relative border-l sm:pl-[60px] pl-8 border-white/15 2xl:pr-[130px] pr-5"
         >
-          <div class="absolute top-[40%] -left-7 flex flex-col gap-2.5">
+          <div
+            class="absolute lg:top-[40%] -bottom-10 lg:-left-7 left-14 flex lg:flex-col gap-2.5"
+          >
             <button
               class="prev-button size-[60px] border bg-purple border-secondary rounded-full flex items-center justify-center cursor-pointer"
             >
@@ -48,7 +52,9 @@ import { ArrowDown, ArrowUp } from "lucide-vue-next";
             >
               <SwiperSlide v-for="(item, i) in clientTestimonials" :key="i">
                 <div class="">
-                  <div class="flex items-center gap-5 mb-10">
+                  <div
+                    class="flex items-center sm:flex-nowrap flex-wrap gap-5 2xl:mb-10 mb-5"
+                  >
                     <div
                       class="px-[13px] py-[7px] border flex items-center gap-2.5 border-white/10 w-fit rounded-full"
                     >
@@ -62,18 +68,20 @@ import { ArrowDown, ArrowUp } from "lucide-vue-next";
                     </p>
                   </div>
                   <h6
-                    class="text-xl leading-8 text-white border-b border-white/15 pb-10"
+                    class="text-xl leading-8 text-white border-b border-white/15 2xl:pb-10 pb-5"
                   >
                     {{ item.text }}
                   </h6>
-                  <div class="mt-[30px] flex items-center gap-[18px]">
+                  <div class="2xl:mt-[30px] mt-5 flex items-center gap-[18px]">
                     <img
                       :src="item.image"
                       :alt="item.text"
                       class="rounded-full"
                     />
                     <div>
-                      <h6 class="heading-six text-white">{{ item.name }}</h6>
+                      <h6 class="heading-six text-white mb-0">
+                        {{ item.name }}
+                      </h6>
                       <p class="text-sm text-white">{{ item.role }}</p>
                     </div>
                   </div>

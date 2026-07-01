@@ -4,16 +4,16 @@ import logo from "@/assets/img/logo/teczo.png";
 import SocialIcon from "./components/SocialIcon.vue";
 </script>
 <template>
-  <footer class="bg-light-gray pt-[250px] -mt-32">
+  <footer class="bg-light-gray sm:pt-[250px] pt-[180px] -mt-32">
     <div class="container">
-      <div class="flex pb-20 justify-between">
+      <div class="flex flex-wrap gap-10 lg:pb-20 pb-10 justify-between">
         <!-- Newsletter -->
         <div>
           <h3 class="heading-four font-bold mb-6">
             Subscribe to Our Newsletter
           </h3>
 
-          <div class="flex flex-col gap-3 w-[535px]">
+          <div class="flex flex-1 flex-col gap-3 lg:w-[535px] w-full">
             <input
               type="email"
               placeholder="Your email address"
@@ -32,12 +32,12 @@ import SocialIcon from "./components/SocialIcon.vue";
         <div>
           <h3 class="text-[22px] font-semibold mb-6">Navigations</h3>
           <ul class="space-y-2 text-lg font-medium text-text">
-            <li>About us</li>
-            <li>Service</li>
-            <li>Portfolio</li>
-            <li>Pricing</li>
-            <li>Team</li>
-            <li>Contact</li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/services">Service</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/home-three">Pricing</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 

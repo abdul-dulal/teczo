@@ -30,7 +30,7 @@ const props = defineProps({
     <button
       :class="
         cn(
-          'size-[50px] rounded-full bg-purple sm:flex hidden items-center justify-center text-white cursor-pointer',
+          'size-[50px] rounded-full bg-purple flex  items-center justify-center text-white cursor-pointer',
           props.class,
         )
       "

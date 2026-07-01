@@ -16,8 +16,8 @@ onMounted(() => {
 
 <template>
   <div class="section-base">
-    <div class="container">
-      <div class="grid grid-cols-[42%_52%] gap-28">
+    <div class="container overflow-hidden">
+      <div class="grid lg:grid-cols-[42%_52%] 2xl:gap-28 gap-6">
         <div>
           <h6 class="heading-six text-purple mb-5">Welcome to Our Teczo</h6>
           <h2 class="heading-one text-primary">
@@ -72,7 +72,7 @@ onMounted(() => {
           </div>
           <Button
             btnTitle="Discover More"
-            class="bg-transparent border border-primary text-primary py-[25px] mt-3"
+            class="bg-transparent border border-primary text-primary mt-3"
           />
         </div>
         <div>

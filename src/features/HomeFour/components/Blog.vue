@@ -6,7 +6,7 @@ import { blogsFour } from "@/demoData";
 <template>
   <section class="section-base">
     <div class="container">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center flex-wrap gap-x-8 justify-between">
         <div class="max-w-[585px]">
           <h6 class="heading-six text-purple">Why People Choose Us</h6>
           <h2 class="heading-one">
@@ -18,7 +18,7 @@ import { blogsFour } from "@/demoData";
           class="bg-transparent border border-primary text-primary"
         />
       </div>
-      <div class="grid grid-cols-3 gap-[30px]">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px] mt-6">
         <div v-for="item in blogsFour" :key="item.id" class="space-y-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">

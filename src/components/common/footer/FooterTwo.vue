@@ -16,7 +16,9 @@ const currentYear = new Date().getFullYear();
       <img :src="wave" alt="Wave" />
     </div>
     <div class="container">
-      <div class="flex justify-between border-b border-white/15 pb-10">
+      <div
+        class="flex flex-wrap gap-10 justify-between border-b border-white/15 pb-10"
+      >
         <div class="space-y-7">
           <img :src="logo" alt="Logo" />
           <p class="paragraph text-white/75 max-w-[273px]">
@@ -110,7 +112,7 @@ const currentYear = new Date().getFullYear();
             </a>
           </div>
         </div>
-        <div class="space-y-4">
+        <div class="space-y-4 ml-5">
           <h4 class="heading-four text-white -ml-5">Explore</h4>
           <ul class="paragraph text-white font-medium space-y-3">
             <li class="list-disc">
@@ -130,7 +132,7 @@ const currentYear = new Date().getFullYear();
             </li>
           </ul>
         </div>
-        <div class="space-y-4">
+        <div class="space-y-4 ml-5">
           <h4 class="heading-four text-white -ml-5">Service link</h4>
           <ul class="paragraph text-white font-medium space-y-3">
             <li class="list-disc">

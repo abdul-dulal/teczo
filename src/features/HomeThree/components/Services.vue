@@ -12,7 +12,7 @@ import { webServices } from "@/demoData";
           Help you overcome your technology challenge
         </h2>
       </div>
-      <div class="grid grid-cols-6 gap-[30px]">
+      <div class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-[30px]">
         <div
           v-for="(item, index) in webServices"
           :key="index"
