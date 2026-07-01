@@ -16,7 +16,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
             <h3
               class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
-              Binu Tech Company
+              Teczo Tech Company
             </h3>
           </div>
           <div class="mt-3">
@@ -32,7 +32,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
             <h3
               class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
-              www.binu.com
+              www.teczo.com
             </h3>
           </div>
           <div class="mt-3">

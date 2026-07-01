@@ -1,5 +1,6 @@
 <script setup>
 import { customerService } from "@/demoData";
+import { ArrowRight } from "lucide-vue-next";
 </script>
 
 <template>
@@ -18,26 +19,46 @@ import { customerService } from "@/demoData";
         <div
           v-for="(item, index) in customerService"
           :key="index"
-          class="relative"
+          class="relative group"
         >
           <div
-            class="size-[120px] rounded-full bg-[#1B1F2E] absolute -top-16 left-10 flex items-center justify-center border-10 border-white/10 z-10"
+            class="size-[130px] rounded-full bg-transparent transition-all ease-in-out duration-500 absolute -top-16 left-10 border-10 border-white/10 group-hover:border-purple"
           >
-            <component
-              :is="item.icon"
-              class="text-secondary group-hover:text-secondary [&_*]:fill-current [&_*]:!fill-current transition duration-300"
-            />
-          </div>
-          <div class="bg-gradient-to-b from-[#4BF0C5]/0 to-[#4BF0C5] z-9999">
-            <img
-              :src="item.image"
-              class="w-full h-full object-cover rounded-[20px]"
-            />
-            <h4
-              class="heading-four text-white max-w-[139px] absolute bottom-[34px] left-[35px]"
+            <div
+              class="size-[110px] rounded-full bg-[#1B1F2E] group-hover:bg-white transition-all ease-in-out duration-500 absolute top-0 left-px flex items-center justify-center z-999"
             >
-              {{ item.title }}
-            </h4>
+              <component
+                :is="item.icon"
+                class="text-secondary group-hover:text-black [&_*]:fill-current [&_*]:!fill-current transition duration-300 z-999"
+              />
+            </div>
+          </div>
+
+          <div class="relative rounded-[20px] overflow-hidden">
+            <img :src="item.image" class="w-full h-full object-cover" alt="" />
+
+            <!-- Gradient Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-[#4BF0C5]/0 to-[#4BF0C5] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+
+            <!-- Title -->
+            <div
+              class="absolute bottom-[34px] left-[35px] right-[35px] flex items-center justify-between"
+            >
+              <h4
+                class="heading-four text-white group-hover:text-black max-w-[139px] leading-[26px] transition-all duration-200"
+              >
+                {{ item.title }}
+              </h4>
+
+              <a
+                href="/services"
+                class="size-11 bg-bg rounded-full flex items-center justify-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <arrow-right color="white" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

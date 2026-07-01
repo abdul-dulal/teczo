@@ -100,7 +100,7 @@ const submitForm = () => {
           <button
             class="bg-white flex items-center gap-1.5 justify-center text-gray-700 px-4 py-4 rounded-lg text-sm font-normal cursor-pointer"
           >
-            <mail size="14" /> binu@mail.com
+            <mail size="14" /> teczo@mail.com
           </button>
           <button
             class="bg-transparente flex items-center gap-1.5 justify-center mt-2.5 px-4 py-4 rounded-lg text-sm font-normal cursor-pointer border border-white/25 text-white"

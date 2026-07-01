@@ -178,7 +178,7 @@ const currentYear = new Date().getFullYear();
           </p>
           <div class="space-y-6">
             <a
-              href="mailto:binuinfo@gmail.com"
+              href="mailto:teczoinfo@gmail.com"
               class="flex items-center gap-4 text-white"
             >
               <svg
@@ -218,7 +218,7 @@ const currentYear = new Date().getFullYear();
                 />
               </svg>
 
-              <span>binuinfo@gmail.com</span>
+              <span>teczoinfo@gmail.com</span>
             </a>
             <a
               href="https://wa.me/3331231688"
