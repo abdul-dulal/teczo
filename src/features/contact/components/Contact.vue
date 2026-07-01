@@ -7,9 +7,9 @@ import vector from "@/assets/img/contact/vector.png";
 <template>
   <section class="section-base">
     <div class="container">
-      <div class="grid grid-cols-3 gap-[30px]">
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-[30px]">
         <div
-          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white p-10 flex items-center justify-center border border-[#1B1F2E1A]"
+          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white lg:p-10 p-5 flex items-center justify-center border border-[#1B1F2E1A]"
         >
           <div class="text-center">
             <img :src="phoneIcon" class="block m-auto" alt="PhoneIcon" />
@@ -25,7 +25,7 @@ import vector from "@/assets/img/contact/vector.png";
           </div>
         </div>
         <div
-          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white p-10 flex items-center justify-center border border-[#1B1F2E1A]"
+          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white lg:p-10 p-5 flex items-center justify-center border border-[#1B1F2E1A]"
         >
           <div class="text-center">
             <img :src="emailIcon" class="block m-auto" alt="PhoneIcon" />
@@ -41,7 +41,7 @@ import vector from "@/assets/img/contact/vector.png";
           </div>
         </div>
         <div
-          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white p-10 flex items-center justify-center border border-[#1B1F2E1A]"
+          class="shadow-[0px_20px_30px_-10px_#03041C0F] bg-white lg:p-10 p-5 flex items-center justify-center border border-[#1B1F2E1A]"
         >
           <div class="text-center">
             <img :src="messageIcon" class="block m-auto" alt="PhoneIcon" />
@@ -109,7 +109,7 @@ import vector from "@/assets/img/contact/vector.png";
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-8 mt-20">
+      <div class="grid md:grid-cols-2 gap-8 mt-20">
         <div class="relative">
           <div class="max-w-[428px]">
             <h6 class="heading-six text-purple">Get in Touch With Us</h6>
@@ -125,10 +125,10 @@ import vector from "@/assets/img/contact/vector.png";
           </div>
         </div>
         <div
-          class="shadow-[0px_20px_60px_-6px_#1B1F2E14] bg-white p-10 border-t-3 rounded-t-2xl border-purple"
+          class="shadow-[0px_20px_60px_-6px_#1B1F2E14] bg-white lg:p-10 p-6 border-t-3 rounded-t-2xl border-purple"
         >
           <form>
-            <div class="grid grid-cols-2 gap-5">
+            <div class="grid xl:grid-cols-2 gap-5">
               <input
                 type="text"
                 placeholder="Full name"

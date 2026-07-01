@@ -29,7 +29,7 @@ defineProps({
         <div class="bg-purple sm:rounded-full rounded-2xl">
           <div class="flex">
             <div>
-              <div class="sm:w-[235px] w-[180px] h-[130px]">
+              <div class="md:w-[235px] w-[180px] h-[130px]">
                 <div class="flex h-full items-center justify-center">
                   <router-link to="/">
                     <img :src="logo" alt="Logo" />
@@ -53,7 +53,7 @@ defineProps({
                         </div>
                       </div>
                       <div
-                        class="sm:flex hidden items-center pr-[25px] border-r border-white"
+                        class="md:flex hidden items-center pr-[25px] border-r border-white"
                       >
                         <div>
                           <Globe size="16" color="white" />

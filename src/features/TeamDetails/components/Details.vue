@@ -21,15 +21,15 @@ const skills = [
 <template>
   <div class="section-base">
     <section class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid md:grid-cols-2 xl:gap-16 gap-[30px]">
         <div>
-          <img :src="member" alt="Team Member" class="rounded-lg" />
+          <img :src="member" alt="Team Member" class="rounded-lg w-full" />
         </div>
         <div>
-          <h6 class="heading-six font-normal text-purple mb-0">
+          <h6 class="heading-six font-normal text-purple mb-3">
             I am a professional business manager
           </h6>
-          <h2 class="text-[60px] font-bold text-primary">Brandon Hussy</h2>
+          <h2 class="heading-one font-bold text-primary mb-3">Brandon Hussy</h2>
           <p class="paragraph font-normal font-inter max-w-[570px]">
             On the other hands, we denounce with righteous indignation dislikes
             men who are so beguiled and demoralized by the charms of pleasure of

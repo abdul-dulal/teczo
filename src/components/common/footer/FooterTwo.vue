@@ -25,7 +25,7 @@ const currentYear = new Date().getFullYear();
             Desire to obtain pain of itself because is is pain, but occasionally
             circumstances
           </p>
-          <div class="flex gap-2.5">
+          <div class="flex gap-2.5 z-9999 relative">
             <a
               href="https://www.facebook.com/"
               target="blank"
@@ -119,16 +119,16 @@ const currentYear = new Date().getFullYear();
               <router-link to="/about">About Us</router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> Meet our team </router-link>
+              <router-link to="/team"> Meet our team </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> News & media </router-link>
+              <router-link to="/blog"> News & media </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> Our projects </router-link>
+              <router-link to="/portfolio"> Our projects </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> Contacts</router-link>
+              <router-link to="/contact"> Contacts</router-link>
             </li>
           </ul>
         </div>
@@ -136,23 +136,23 @@ const currentYear = new Date().getFullYear();
           <h4 class="heading-four text-white -ml-5">Service link</h4>
           <ul class="paragraph text-white font-medium space-y-3">
             <li class="list-disc">
-              <router-link to="/about">Data visualization </router-link>
+              <router-link to="/services">Data visualization </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> UI/UX Designing </router-link>
+              <router-link to="/services"> UI/UX Designing </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> Digital marketing </router-link>
+              <router-link to="/services"> Digital marketing </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about">Data analytics </router-link>
+              <router-link to="/services">Data analytics </router-link>
             </li>
             <li class="list-disc">
-              <router-link to="/about"> Security system</router-link>
+              <router-link to="/services"> Security system</router-link>
             </li>
           </ul>
         </div>
-        <div class="space-y-4">
+        <div class="space-y-4 z-999">
           <h4 class="heading-four text-white">Recent Post</h4>
 
           <div class="flex items-center gap-5">
@@ -164,11 +164,12 @@ const currentYear = new Date().getFullYear();
               />
             </div>
             <div>
-              <h6
-                class="text-[17px] font-bold leading-[22px] text-white max-w-[148px] tracking-[-0.2px]"
+              <a
+                href="/blog-details"
+                class="text-[17px] inline-block font-bold leading-[22px] text-white max-w-[148px] tracking-[-0.2px]"
               >
                 Designers who are changed the web
-              </h6>
+              </a>
               <p class="text-sm text-white/75 font-normal">July 26, 2024</p>
             </div>
           </div>
@@ -181,11 +182,12 @@ const currentYear = new Date().getFullYear();
               />
             </div>
             <div>
-              <h6
-                class="text-[17px] font-bold leading-[22px] text-white max-w-[148px] tracking-[-0.2px]"
+              <a
+                href="/blog-details"
+                class="text-[17px] inline-block font-bold leading-[22px] text-white max-w-[148px] tracking-[-0.2px]"
               >
                 Designers who are changed the web
-              </h6>
+              </a>
               <p class="text-sm text-white/75 font-normal">July 26, 2024</p>
             </div>
           </div>
@@ -194,7 +196,7 @@ const currentYear = new Date().getFullYear();
       <div class="text-center mt-[30px]">
         <p class="paragraph text-white/75 font-inter mb-0 font-medium">
           Copyright &copy; {{ currentYear }}
-          <span class="text-secondary">Teczo</span>. All Rights Reserved.
+          <a href="/" class="text-secondary">Teczo</a>. All Rights Reserved.
         </p>
       </div>
     </div>

@@ -66,7 +66,9 @@ const comments = [
       <p class="text-sm font-medium text-[#5C6972]">April 12, 2025</p>
     </div>
     <div>
-      <h3 class="text-[34px] font-bold text-black leading-6 mb-[30px]">
+      <h3
+        class="sm:text-[34px] text-[28px] font-bold text-black md:leading-11 leading-9 sm:mb-[30px] mb-6"
+      >
         Best data analytics events now
       </h3>
       <p class="paragraph text-[#5C6972]">
@@ -97,7 +99,9 @@ const comments = [
         </li>
       </ul>
       <div class="mt-6">
-        <h3 class="text-[34px] font-bold text-black leading-6 mb-[30px]">
+        <h3
+          class="sm:text-[34px] text-[28px] font-bold text-black md:leading-11 leading-9 sm:mb-[30px] mb-6"
+        >
           Best data analytics events now
         </h3>
         <p class="paragraph text-[#5C6972] my-6">
@@ -107,12 +111,14 @@ const comments = [
           odio vitae sem lobortis.
         </p>
       </div>
-      <div class="grid grid-cols-2 gap-[30px]">
+      <div class="grid sm:grid-cols-2 gap-[30px]">
         <img class="rounded-xl" :src="feature01" alt="Feature" />
         <img class="rounded-xl" :src="feature02" alt="Feature" />
       </div>
       <div class="mt-8">
-        <h3 class="text-[34px] font-bold text-black leading-6 mb-[30px]">
+        <h3
+          class="sm:text-[34px] text-[28px] font-bold text-black md:leading-11 leading-9 sm:mb-[30px] mb-6"
+        >
           Learning from Failure
         </h3>
         <p class="paragraph text-[#5C6972] my-6">
@@ -120,7 +126,7 @@ const comments = [
           existence is a myth. For science europe uses the same vocabulary.
         </p>
       </div>
-      <ul class="space-y-2 pt-3">
+      <ul class="space-y-2 pt-3 lg:ml-0 ml-5">
         <li class="text-base leading-6 text-bg list-disc">
           Get yourself comfortable.
         </li>
@@ -138,7 +144,7 @@ const comments = [
           <button
             v-for="tag in tags"
             :key="tag.name"
-            class="px-[19px] py-3 text-lg font-medium border border-[#1B1F2E1A] rounded-full text-[#5C6972]"
+            class="md:px-[19px] px-[15px] md:py-3 py-2 sm:text-lg text-base font-medium border border-[#1B1F2E1A] rounded-full text-[#5C6972]"
           >
             {{ tag.name }}
           </button>
@@ -147,7 +153,9 @@ const comments = [
     </div>
 
     <div>
-      <h2 class="text-[34px] font-bold text-black leading-6 my-[30px]">
+      <h2
+        class="sm:text-[34px] text-[28px] font-bold text-black md:leading-11 leading-9 sm:mb-[30px] mb-6"
+      >
         Comments (2)
       </h2>
 

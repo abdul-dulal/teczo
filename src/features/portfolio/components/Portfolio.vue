@@ -10,7 +10,7 @@ defineProps({
 <template>
   <section :class="showgap ? 'section-base' : ''">
     <div class="container">
-      <div class="grid grid-cols-3 gap-[30px]">
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
         <div
           v-for="(item, index) in portfolioData.slice(0, sliceNumber)"
           :key="index"

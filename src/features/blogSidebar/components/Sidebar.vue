@@ -105,7 +105,7 @@ const tags = [
     </div>
 
     <!-- Categories -->
-    <div class="rounded-2xl bg-light-gray p-10">
+    <div class="rounded-2xl bg-light-gray md:p-10 p-5">
       <h3 class="text-[22px] font-bold leading-7 mb-[30px] text-bg">
         Categories
       </h3>

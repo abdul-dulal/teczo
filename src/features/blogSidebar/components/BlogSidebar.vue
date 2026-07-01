@@ -6,8 +6,8 @@ import author from "@/assets/img/blog/author.png";
 <template>
   <div class="section-base">
     <div class="container">
-      <div class="grid grid-cols-[60%_32%] gap-[100px]">
-        <div>
+      <div class="grid lg:grid-cols-[60%_32%] 2xl:gap-[100px] lg:gap-20 gap-10">
+        <div class="order-2 lg:order-1">
           <div v-for="(item, index) in blogData" :key="index">
             <div>
               <div class="relative">
@@ -35,7 +35,9 @@ import author from "@/assets/img/blog/author.png";
                 </button>
                 <p class="text-sm font-medium text-[#5C6972]">April 12, 2025</p>
               </div>
-              <h3 class="text-[34px] font-bold text-black leading-6 mb-[30px]">
+              <h3
+                class="sm:text-[34px] text-[28px] font-bold text-black md:leading-11 leading-9 sm:mb-[30px] mb-6"
+              >
                 {{ item.title }}
               </h3>
               <p class="paragraph mb-6">
@@ -58,7 +60,7 @@ import author from "@/assets/img/blog/author.png";
             </div>
           </div>
         </div>
-        <div>
+        <div class="order-1 lg:order-2">
           <Sidebar />
         </div>
       </div>

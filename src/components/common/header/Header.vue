@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from "vue-router";
-import logo from "@/assets/img/logo/primary-logo.png";
+import logo from "@/assets/img/logo/teczo.png";
 import { ArrowUpRight, Search } from "@lucide/vue";
 import SearchPopup from "./SearchPopup.vue";
 import Drawer from "./Drawer.vue";

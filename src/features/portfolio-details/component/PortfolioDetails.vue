@@ -9,12 +9,12 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
 <template>
   <section class="section-base">
     <div class="container">
-      <div class="grid grid-cols-[31%_60%] gap-[30px]">
-        <div class="bg-purple rounded-[20px] p-10">
+      <div class="grid lg:grid-cols-[31%_60%] gap-[30px]">
+        <div class="bg-purple rounded-[20px] sm:p-10 p-6">
           <div>
             <p class="text-lg font-medium text-white leading-6">Client</p>
             <h3
-              class="text-[30px] mt-3 font-medium text-white border-b border-white/20 pb-6"
+              class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
               Binu Tech Company
             </h3>
@@ -22,7 +22,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
           <div class="mt-3">
             <p class="text-lg font-medium text-white leading-6">Date</p>
             <h3
-              class="text-[30px] mt-3 font-medium text-white border-b border-white/20 pb-6"
+              class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
               Janu 2025
             </h3>
@@ -30,7 +30,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
           <div class="mt-3">
             <p class="text-lg font-medium text-white leading-6">Website</p>
             <h3
-              class="text-[30px] mt-3 font-medium text-white border-b border-white/20 pb-6"
+              class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
               www.binu.com
             </h3>
@@ -38,7 +38,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
           <div class="mt-3">
             <p class="text-lg font-medium text-white leading-6">Value</p>
             <h3
-              class="text-[30px] mt-3 font-medium text-white border-b border-white/20 pb-6"
+              class="md:text-[30px] text-2xl mt-3 font-medium text-white border-b border-white/20 pb-6"
             >
               $256.36
             </h3>
@@ -52,10 +52,12 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
         </div>
       </div>
       <div class="mt-10">
-        <h2 class="text-[40px] font-bold leading-[55px]">
+        <h2
+          class="md:text-[40px] sm:text-[36px] text-[30px] font-bold md:leading-[55px] sm:leading-9 leading-8"
+        >
           Improve and Innovate with the Tech Trends
         </h2>
-        <p class="heading-six text-[#5C6972] mt-10 font-inter">
+        <p class="heading-six text-[#5C6972] md:mt-10 mt-5 font-inter">
           With worldwide annual spend on digital advertising surpassing $325
           billion, it’s no surprise that different approaches to online
           marketing are becoming available. One of these new approache marketing
@@ -80,7 +82,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
           become a lead.
         </p>
       </div>
-      <div class="flex items-center gap-3">
+      <div class="flex sm:items-center gap-3">
         <div>
           <img :src="quote" alt="Quote" />
         </div>
@@ -90,12 +92,16 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
         </h5>
       </div>
 
-      <div class="grid grid-cols-2 gap-[30px] my-10">
+      <div class="grid sm:grid-cols-2 gap-[30px] my-10">
         <img :src="team01" class="rounded-xl" alt="Team" />
         <img :src="team02" class="rounded-xl" alt="Team" />
       </div>
       <div>
-        <h2 class="text-[40px] font-bold leading-[55px]">Process & Results</h2>
+        <h2
+          class="md:text-[40px] sm:text-[36px] text-[30px] font-bold md:leading-[55px] sm:leading-9 leading-8"
+        >
+          Process & Results
+        </h2>
         <p class="heading-six text-[#5C6972] mt-6 font-inter">
           With worldwide annual spend on digital advertising surpassing $325
           billion, it’s no surprise that different approaches to online
@@ -111,7 +117,7 @@ import Portfolio from "@/features/portfolio/components/Portfolio.vue";
         </p>
       </div>
 
-      <div class="mt-20">
+      <div class="sm:mt-20 mt-10">
         <h2 class="heading-one text-center">our related projects</h2>
 
         <Portfolio :showgap="false" />
